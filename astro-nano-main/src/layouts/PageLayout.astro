@@ -25,6 +25,11 @@ const { title, description } = Astro.props;
     />
     
     <style is:global>
+      /* 🔥 防止行內數學公式被拆開換行 */
+      .katex:not(.katex-display) {
+        white-space: nowrap !important;
+        display: inline-block !important;
+      }
       /* 🔥 精確針對主要內容區域的數學公式 */
       main.content .katex-display {
         display: block !important;
