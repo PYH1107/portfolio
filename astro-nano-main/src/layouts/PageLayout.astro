@@ -13,13 +13,50 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <Head title={`${title} | ${SITE.NAME}`} description={description} />
+    
+    <link 
+      rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
+      integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
+      crossorigin="anonymous"
+    />
+    
+    <style is:global>
+      /* 🔥 精確針對主要內容區域的數學公式 */
+      main.content .katex-display {
+        display: block !important;
+        text-align: center !important;
+        margin: 1.5em auto !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+      
+      /* 基本 KaTeX 樣式 */
+      .katex {
+        color: inherit !important;
+        font-size: 1.1em;
+      }
+      
+      /* 確保行內數學不受影響 */
+      main.content .katex:not(.katex-display) {
+        display: inline !important;
+        text-align: inherit !important;
+        margin: 0 !important;
+      }
+      
+      /* 深色主題兼容 */
+      [data-theme="dark"] .katex,
+      .dark .katex {
+        color: #e5e7eb !important;
+      }
+    </style>
   </head>
   <body>
     <Header />
-    <main>
+    <main class="content">  <!-- 🔥 加上 class -->
       <slot />
     </main>
     <Footer />
