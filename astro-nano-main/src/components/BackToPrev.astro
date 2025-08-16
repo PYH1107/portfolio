@@ -1,12 +1,18 @@
 ---
 type Props = {
-  href: string;
+  href?: string;
+  fallback?: string;
 }
 
-const { href } = Astro.props;
+const { href, fallback = "/" } = Astro.props;
 ---
  
-<a href={href} class="relative group w-fit flex pl-7 pr-3 py-1.5 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
+<button 
+  class="back-button relative group w-fit flex pl-7 pr-3 py-1.5 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out cursor-pointer"
+  data-href={href}
+  data-fallback={fallback}
+  onclick="handleBackClick(this)"
+>
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 24 24"
@@ -17,4 +23,22 @@ const { href } = Astro.props;
   <div class="text-sm">
     <slot/>
   </div>
-</a>
+</button>
+
+<script is:inline>
+  function handleBackClick(button) {
+    console.log('Back button clicked'); // 調試用
+    
+    // 嘗試回到上一頁
+    if (document.referrer && document.referrer !== window.location.href) {
+      console.log('Going back to:', document.referrer);
+      window.history.back();
+    } else {
+      // 如果沒有 referrer，使用 fallback
+      const fallback = button.getAttribute('data-fallback') || '/';
+      const href = button.getAttribute('data-href') || fallback;
+      console.log('No referrer, going to fallback:', fallback);
+      window.location.href = href;
+    }
+  }
+</script>

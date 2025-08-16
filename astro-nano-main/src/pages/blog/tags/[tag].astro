@@ -49,8 +49,8 @@ const displayTag = tag.charAt(0).toUpperCase() + tag.slice(1);
 <PageLayout title={`Posts tagged with "${displayTag}"`} description={`All blog posts tagged with ${displayTag}`}>
   <Container>
     <div class="animate">
-      <BackToPrev href="/blog">
-        Back to blog
+      <BackToPrev fallback="/blog">
+        Back
       </BackToPrev>
     </div>
     <div class="space-y-10 my-10">
