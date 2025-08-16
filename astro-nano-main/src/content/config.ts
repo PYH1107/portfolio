@@ -7,17 +7,14 @@ const blog = defineCollection({
     description: z.string(),
     date: z.coerce.date(),
     draft: z.boolean().optional(),
-    tags: z.array(z.string()).default([]),  // 🔥 加入 tags
+    tags: z.array(z.string()).default([]), 
   }),
 });
 
 const jottings = defineCollection({
   type: "content",
   schema: z.object({
-    company: z.string(),
-    role: z.string(),
-    dateStart: z.coerce.date(),
-    dateEnd: z.union([z.coerce.date(), z.string()]),
+    date: z.coerce.date(),
   }),
 });
 

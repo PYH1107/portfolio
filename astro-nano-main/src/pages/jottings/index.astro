@@ -6,7 +6,7 @@ import { dateRange } from "@lib/utils";
 import { JOTTINGS } from "@consts";
 
 const collection = (await getCollection("jottings"))
-  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf());
+  .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
 
 const jottings = await Promise.all(
   collection.map(async (item) => {
@@ -18,34 +18,67 @@ const jottings = await Promise.all(
 
 <PageLayout title={JOTTINGS.TITLE} description={JOTTINGS.DESCRIPTION}>
   <Container>
-    <div class="space-y-10">
-      <div class="animate font-semibold text-black dark:text-white">
+    <div class="max-w-2xl mx-auto space-y-8">
+      <!-- Header -->
+      <div class="animate font-bold text-2xl text-black dark:text-white">
         Jottings
       </div>
-      <ul class="flex flex-col space-y-4">
-        { 
-          jottings.map(entry => (
-            <li class="animate">
-              <div class="text-sm opacity-75">
-                {dateRange(entry.data.dateStart, entry.data.dateEnd)}
-              </div>
-              <div class="font-semibold text-black dark:text-white">
-                {entry.data.company}
-              </div>
-              <div class="text-sm opacity-75">
-                {entry.data.role}
-              </div>
-              <article>
-                <entry.Content />
-              </article>
-            </li>
-          ))
-        }
-      </ul>
-<!-- 
-      <ul class="animate flex flex-col gap-4">
+      
+      <!-- Simple Feed with Dividers -->
+      <div class="space-y-0">
+        {jottings.map((entry, index) => (
+          <article class="animate py-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+            <!-- Date in top-left -->
+            <div class="flex items-start justify-between mb-3">
+              <time class="text-sm text-gray-500 dark:text-gray-400 font-medium">
+                {entry.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+              </time>
+            </div>
+            
 
-      </ul> -->
+            
+            <!-- Content -->
+            <div class="prose prose-sm dark:prose-invert max-w-none text-gray-900 dark:text-gray-100">
+              <entry.Content />
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
   </Container>
 </PageLayout>
+
+<style is:global>
+  /* 優化 prose 樣式 */
+  .prose {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+  
+  .prose p {
+    margin: 0.75rem 0;
+  }
+  
+  .prose p:first-child {
+    margin-top: 0;
+  }
+  
+  .prose p:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* 動畫優化 */
+  .animate {
+    animation-delay: calc(var(--index, 0) * 0.1s);
+  }
+</style>
+
+<script>
+  // 添加漸入動畫
+  document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.animate');
+    animatedElements.forEach((el, index) => {
+      el.style.setProperty('--index', index.toString());
+    });
+  });
+</script>
