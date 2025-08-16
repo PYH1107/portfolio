@@ -4,7 +4,7 @@ export const SITE: Site = {
   NAME: "Yun-Huei Pan",
   EMAIL: "maypan1107@gmail.com",
   NUM_POSTS_ON_HOMEPAGE: 3,
-  NUM_DIGEST_ON_HOMEPAGE: 2,
+  NUM_JOTTINGS_ON_HOMEPAGE: 2,
   NUM_PROJECTS_ON_HOMEPAGE: 3,
 };
 
@@ -18,8 +18,8 @@ export const BLOG: Metadata = {
   DESCRIPTION: "A collection of articles on topics I am passionate about.",
 };
 
-export const DIGEST = {
-  TITLE: "Digest",
+export const JOTTINGS = {
+  TITLE: "Jottings",
   DESCRIPTION: "My thoughts and insights."
 }
 
