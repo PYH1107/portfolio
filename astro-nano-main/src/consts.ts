@@ -3,9 +3,9 @@ import type { Site, Metadata, Socials } from "@types";
 export const SITE: Site = {
   NAME: "Yun-Huei Pan",
   EMAIL: "maypan1107@gmail.com",
-  NUM_POSTS_ON_HOMEPAGE: 3,
-  NUM_JOTTINGS_ON_HOMEPAGE: 2,
-  NUM_PROJECTS_ON_HOMEPAGE: 3,
+  NUM_POSTS_ON_HOMEPAGE: 1,
+  NUM_JOTTINGS_ON_HOMEPAGE: 1,
+  NUM_PROJECTS_ON_HOMEPAGE: 0, // Set to 0 to disable projects on homepage
 };
 
 export const HOME: Metadata = {
