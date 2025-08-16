@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 import Container from "@components/Container.astro";
-import { dateRange } from "@lib/utils";
 import { JOTTINGS } from "@consts";
 
 const collection = (await getCollection("jottings"))
@@ -26,7 +25,7 @@ const jottings = await Promise.all(
       
       <!-- Simple Feed with Dividers -->
       <div class="space-y-0">
-        {jottings.map((entry, index) => (
+        {jottings.map((entry) => (
           <article class="animate py-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
             <!-- Date in top-left -->
             <div class="flex items-start justify-between mb-3">
@@ -78,7 +77,7 @@ const jottings = await Promise.all(
   document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.animate');
     animatedElements.forEach((el, index) => {
-      el.style.setProperty('--index', index.toString());
+      (el as HTMLElement).style.setProperty('--index', index.toString());
     });
   });
 </script>
