@@ -2,6 +2,7 @@
 title: "Latex TRY"
 description: "This is from HTML HW3"
 date: "Mar 22 2025"
+tags: ["Machine Learning", "LaTeX"]
 ---
 
 ### Q.5

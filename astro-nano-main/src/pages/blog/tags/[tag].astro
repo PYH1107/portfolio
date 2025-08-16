@@ -1,0 +1,75 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+import BackToPrev from "@components/BackToPrev.astro";
+import { BLOG } from "@consts";
+
+export async function getStaticPaths() {
+  const posts = (await getCollection("blog"))
+    .filter(post => !post.data.draft);
+  
+  // 收集所有 tags
+  const allTags = new Set<string>();
+  posts.forEach(post => {
+    if (post.data.tags) {
+      post.data.tags.forEach((tag: string) => {
+        allTags.add(tag.toLowerCase());
+      });
+    }
+  });
+
+  // 為每個 tag 創建路徑
+  return Array.from(allTags).map(tag => ({
+    params: { tag },
+    props: { tag, posts }
+  }));
+}
+
+type Props = {
+  tag: string;
+  posts: CollectionEntry<"blog">[];
+}
+
+const { tag, posts } = Astro.props;
+
+// 篩選出包含該 tag 的文章
+const filteredPosts = posts
+  .filter(post => 
+    post.data.tags && 
+    post.data.tags.some((t: string) => t.toLowerCase() === tag)
+  )
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// 將 tag 首字母大寫用於顯示
+const displayTag = tag.charAt(0).toUpperCase() + tag.slice(1);
+---
+
+<PageLayout title={`Posts tagged with "${displayTag}"`} description={`All blog posts tagged with ${displayTag}`}>
+  <Container>
+    <div class="animate">
+      <BackToPrev href="/blog">
+        Back to blog
+      </BackToPrev>
+    </div>
+    <div class="space-y-10 my-10">
+      <div class="animate font-semibold text-black dark:text-white">
+        Posts tagged with "#{displayTag}"
+      </div>
+      <div class="space-y-4">
+        {filteredPosts.length > 0 ? (
+          <ul class="flex flex-col gap-4">
+            {filteredPosts.map(post => (
+              <li>
+                <ArrowCard entry={post} />
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="text-sm opacity-75">No posts found with this tag.</p>
+        )}
+      </div>
+    </div>
+  </Container>
+</PageLayout>
