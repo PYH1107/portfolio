@@ -1,7 +1,7 @@
 ---
 title: "Latex TRY"
 description: "This is from HTML HW3"
-date: "Mar 22 2025"
+date: "Mar 22 1980"
 tags: ["Machine Learning", "LaTeX"]
 ---
 
