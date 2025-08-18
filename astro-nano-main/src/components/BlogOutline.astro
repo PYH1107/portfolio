@@ -1,0 +1,202 @@
+---
+export interface Props {
+  markdownContent: string;
+}
+
+const { markdownContent } = Astro.props;
+
+// Parse markdown headings
+function parseMarkdownHeadings(content: string) {
+  const lines = content.split('\n');
+  const headings: Array<{level: number, text: string, id: string}> = [];
+  
+  lines.forEach((line, index) => {
+    const match = line.match(/^(#{1,6})\s+(.+)$/);
+    if (match) {
+      const level = match[1].length;
+      const text = match[2].trim();
+      const id = text.toLowerCase()
+        .replace(/[^\w\s\u4e00-\u9fff-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/^-+|-+$/g, '');
+      headings.push({ level, text, id: id || `heading-${index}` });
+    }
+  });
+  
+  return headings;
+}
+
+const headings = parseMarkdownHeadings(markdownContent);
+---
+
+{headings.length > 0 && (
+  <div id="blog-outline" class="hidden lg:block fixed left-8 top-1/2 -translate-y-1/2 max-h-[70vh] w-64 z-40">
+    <div class="outline-container">
+      <nav class="outline-nav">
+        <ul id="outline-list" class="max-h-[60vh] overflow-y-auto">
+          {headings.map((heading, index) => (
+            <li class="outline-item" data-level={heading.level}>
+              <a 
+                href={`#${heading.id}`}
+                class="outline-link block py-0.5 text-sm text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-200 transition-colors duration-150 relative"
+                style={`margin-left: ${Math.max(0, (heading.level - 1) * 12)}px`}
+              >
+                <span class="relative z-10">{heading.text}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+  </div>
+)}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const article = document.querySelector('article');
+    const outline = document.getElementById('blog-outline');
+    
+    if (!article) return;
+    
+    // Find all headings in the article and assign IDs
+    const headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    
+    headings.forEach((heading, index) => {
+      const text = heading.textContent?.trim() || '';
+      const id = text.toLowerCase()
+        .replace(/[^\w\s\u4e00-\u9fff-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/^-+|-+$/g, '') || `heading-${index}`;
+      
+      heading.id = id;
+    });
+    
+    // Add smooth scroll behavior to outline links
+    const outlineLinks = document.querySelectorAll('.outline-link');
+    
+    outlineLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href')?.substring(1);
+        const target = document.getElementById(targetId || '');
+        
+        if (target) {
+          target.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+          
+          // Update active state
+          outlineLinks.forEach(l => {
+            l.classList.remove('text-stone-900', 'dark:text-stone-200', 'active');
+            l.classList.add('text-stone-600', 'dark:text-stone-400');
+          });
+          this.classList.remove('text-stone-600', 'dark:text-stone-400');
+          this.classList.add('text-stone-900', 'dark:text-stone-200', 'active');
+        }
+      });
+    });
+    
+    // Highlight current section on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          const activeLink = document.querySelector(`.outline-link[href="#${id}"]`);
+          
+          if (activeLink) {
+            outlineLinks.forEach(link => {
+              link.classList.remove('text-stone-900', 'dark:text-stone-200', 'active');
+              link.classList.add('text-stone-600', 'dark:text-stone-400');
+            });
+            
+            activeLink.classList.remove('text-stone-600', 'dark:text-stone-400');
+            activeLink.classList.add('text-stone-900', 'dark:text-stone-200', 'active');
+          }
+        }
+      });
+    }, {
+      rootMargin: '-20% 0px -80% 0px'
+    });
+    
+    // Observe all headings
+    headings.forEach(heading => {
+      observer.observe(heading);
+    });
+  });
+</script>
+
+<style>
+  .outline-container {
+    position: relative;
+  }
+  
+  .outline-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: rgba(120, 113, 108, 0.2);
+    border-radius: 2px;
+  }
+  
+  .dark .outline-container::before {
+    background-color: rgba(168, 162, 158, 0.2);
+  }
+  
+  .outline-nav {
+    padding-left: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  }
+  
+  .outline-nav::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .outline-nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .outline-nav::-webkit-scrollbar-thumb {
+    background-color: rgba(120, 113, 108, 0.2);
+    border-radius: 2px;
+  }
+  
+  .outline-nav::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(120, 113, 108, 0.4);
+  }
+  
+  .dark .outline-nav::-webkit-scrollbar-thumb {
+    background-color: rgba(168, 162, 158, 0.2);
+  }
+  
+  .dark .outline-nav::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(168, 162, 158, 0.4);
+  }
+  
+  .outline-item {
+    margin: 2px 0;
+  }
+  
+  .outline-link {
+    line-height: 1.4;
+  }
+  
+  .outline-link:hover {
+    color: inherit;
+    opacity: 0.8;
+  }
+  
+  .outline-link.active {
+    font-weight: 500;
+  }
+  
+  @media (max-width: 1023px) {
+    #blog-outline {
+      display: none !important;
+    }
+  }
+</style>

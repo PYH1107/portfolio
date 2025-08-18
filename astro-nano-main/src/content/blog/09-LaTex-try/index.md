@@ -5,7 +5,12 @@ date: "Mar 22 2025"
 tags: ["Machine Learning", "LaTeX"]
 ---
 
+# 1ddddd
+## 2dddddddds
 ### Q.5
+
+#### hi
+##### dd
 
 1. By recalling the definition of VC Dimension, we learn that:  
    $d_{vc}(\mathcal{H})$ is the size of the largest set of points that $\mathcal{H}$ can shatter.
