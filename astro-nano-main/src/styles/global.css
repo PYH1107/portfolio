@@ -55,6 +55,26 @@ article {
     @apply text-black dark:text-white;
     @apply decoration-black/25 dark:decoration-white/50;
   }
+  
+  /* Inline code styling */
+  article :not(pre) > code {
+    @apply bg-stone-200 dark:bg-stone-700;
+    @apply text-stone-900 dark:text-stone-100;
+    @apply px-1 py-0.5 rounded text-sm font-mono;
+    @apply before:content-none after:content-none;
+  }
+  
+  /* Code block styling */
+  article pre {
+    @apply bg-stone-900 dark:bg-stone-950;
+    @apply text-stone-100;
+    @apply p-4 rounded-lg overflow-x-auto;
+    @apply text-sm font-mono;
+  }
+  
+  article pre code {
+    @apply bg-transparent text-inherit p-0;
+  }
 }
 
 .animate {
