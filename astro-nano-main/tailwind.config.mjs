@@ -9,8 +9,24 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-        serif: ["Lora", ...defaultTheme.fontFamily.serif],
+        sans: [
+          "Inter", 
+          "Noto Sans TC", 
+          "PingFang SC", 
+          "Hiragino Sans GB", 
+          "Microsoft YaHei",
+          "sans-serif",
+          ...defaultTheme.fontFamily.sans
+        ],
+        serif: [
+          "Lora", 
+          "Noto Serif TC", 
+          "PingFang TC", 
+          "Hiragino Mincho ProN",
+          "Microsoft YaHei",
+          "serif",
+          ...defaultTheme.fontFamily.serif
+        ],
       },
     },
   },
