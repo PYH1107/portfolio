@@ -34,7 +34,7 @@ const headings = parseMarkdownHeadings(markdownContent);
     <div class="outline-container">
       <nav class="outline-nav">
         <ul id="outline-list" class="max-h-[60vh] overflow-y-auto">
-          {headings.map((heading, index) => (
+          {headings.map((heading) => (
             <li class="outline-item" data-level={heading.level}>
               <a 
                 href={`#${heading.id}`}
@@ -54,7 +54,6 @@ const headings = parseMarkdownHeadings(markdownContent);
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const article = document.querySelector('article');
-    const outline = document.getElementById('blog-outline');
     
     if (!article) return;
     
@@ -75,7 +74,7 @@ const headings = parseMarkdownHeadings(markdownContent);
     const outlineLinks = document.querySelectorAll('.outline-link');
     
     outlineLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
+      link.addEventListener('click', function(this: HTMLAnchorElement, e: Event) {
         e.preventDefault();
         const targetId = this.getAttribute('href')?.substring(1);
         const target = document.getElementById(targetId || '');
