@@ -63,7 +63,7 @@ IndieWeb 提供 WordPress 用戶提供了免費插件：[IndieAuth](https://word
 
 ![example pic](./Pasted%20image%2020250819234112.png)
 
-## Step 4: 將將上述 html 添加到網站當中
+## Step 4: 將上述 html 添加到網站當中
 
 加到任何地方都可以。我選擇添加到 footer 中，讓瀏覽者可以隨時點選，也有人選擇添加到某篇特定的文章中，全憑使用者喜好。
 
