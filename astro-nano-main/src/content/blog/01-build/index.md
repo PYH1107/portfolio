@@ -3,7 +3,7 @@
 title: "在 2025 用 Claude Code 建立個人網站"
 description: "Everything in this website is built by Claude Code (nearly)."
 date: "Aug 18 2025"
-tags: ["Claude Code", "website"]
+tags: ["project", "website"]
 ---
 
 ---
