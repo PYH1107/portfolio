@@ -117,7 +117,7 @@ claude
 
 ### Favicon
 
-不想用官方的 favicon，所以我其實有點苦惱該用什麼代替。最後選擇了[ favicon.io](https://favicon.io/)，以我英文名字的首字母作為標記。
+不想用 Astro 官方的 favicon，所以我其實有點苦惱該用什麼代替。最後選擇了[ favicon.io](https://favicon.io/)，以我英文名字的首字母作為標記。
 
 
 ---
