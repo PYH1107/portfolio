@@ -1,7 +1,7 @@
 
 ---
 title: "在 2025 用 Claude Code 建立個人網站"
-description: "Everything in this website is built by Claude Code (nearly)."
+description: "Everything on this website is built by Claude Code (nearly)."
 date: "Aug 18 2025"
 tags: ["project", "website"]
 ---
@@ -9,14 +9,14 @@ tags: ["project", "website"]
 ---
 # 契機
 
-說來有些慚愧，起心動念想寫個人部落格不外乎三個理由：
+說來有些慚愧，起心動念想寫個人部落格不過三個理由：
 1. 求職的時候，「個人作品」、「個人網站」的欄位總是空白，稍顯尷尬
 2. 想找個地方放零散的作品
 3. 希望更好的包裝自己
 
-除此之外，因為最近看了些很喜歡的作品，也遇見了很多有趣的人、事、物，但總是懶著紀錄，於是希望能夠以此處為施力點，迫使自己將生命經驗製成染料來創作。
+除此之外，由於近期生活變動較大，也遇見了喜歡的作品與人物，便希望能夠以此處為施力點，將生命經驗製成染料來渲染自己。
 
-簡而言之就是「展示」與「包裝」，和社群媒體的經營幾乎一模一樣，只是我不擅長拍攝照片，所以試圖以長篇的文字掩蓋這個短板。
+簡而言之就是「展示」與「包裝」，與社群媒體的意涵大同小異，只是我不擅長拍攝照片，於是想著以長篇的文字掩蓋這個短板。
 
 # 建立
 
@@ -57,12 +57,14 @@ tags: ["project", "website"]
 整個部署幾乎不費腦子。我先在本地 `npm run build` 過了一次，在 Vercel 上花不到五分鐘就弄好了（兩分鐘在註冊與聯動 GitHub）。
 
 
-網址應該可以很簡單的看出這個網站是靠 Vercel 部署的。除非哪天真的想建立個人品牌或者顯示出專業度，否則我應該不會有閒錢去買網域。
+~~網址應該可以很簡單的看出這個網站是靠 Vercel 部署的。除非哪天真的想建立個人品牌或者顯示出專業度，否則我應該不會有閒錢去買網域。~~
+
+（更：間隔不到一週我就買域名了，大大的 vercep.app 在那邊放著總是有點羞赧。）
 
 
 # How: Claude Code
 
-在上一頁的 Description 中，我寫道："Everything in this website is built by Claude Code (nearly)."
+在上一頁的 Description 中，我寫道："Everything on this website is built by Claude Code (nearly)."
 
 我全程下來幾乎只有做 code review、檢查架構和設計內容與排版。
 從找框架到真正架起來，整個過程花不到四小時。其中一小時在挑框架，半小時在修改與下載 LaTeX 的設定，半小時在設計 favicon，其他都在想內容。
@@ -75,7 +77,7 @@ Claude Code 是基於 Claude 的 CLI，維持對整個專案結構的認知，�
 
 ## Installation
 
-（以下說明已 Claude pro 用戶 + VSCode 使用者作為範例）
+（以下說明以 Claude pro 用戶 + VSCode 使用者作為範例）
 
 首先在終端機中全域下載 Claude Code 並指定某一專案打開：
 
@@ -100,7 +102,7 @@ claude
 
 ### LaTeX
 
-(Claude Code 可以做到的就不贅述，這邊只講概念)
+(Claude Code 可以做到的就不贅述，這邊只講個大概)
 
 `pnpm add remark-math rehype-katex`
 
@@ -119,6 +121,5 @@ claude
 
 
 ---
-以上就是我架設個人網站的全過程。在「設計」跟「定位」上花我最多時間思考。整個構建的過程，竟然呈現出當代 AI 的強大之處，實在令人讚嘆。簡單的前端網頁在今天儼然成了唾手可得之物，更映襯出「內容」的重要性，要更凸顯出文字與紀錄的價值。
-
+以上就是我架設個人網站的全過程。對於整個過程，我的心得有點庸俗，不外乎就是「內容」的重要性，與「文字」和「紀錄」的價值，然事實也確實如此。在「設計」跟「定位」上花我最多時間思考。整個構建的過程幾乎不費吹灰之力，只要有些許 Typescript 和前端的概念就已完全足夠，實在令人讚嘆——外在的一切吹噓和追捧，在今天儼然成了唾手可得之物。
 
