@@ -2,7 +2,7 @@
 title: "Webring 介紹與教學"
 description: "我在 footer 放了什麼？"
 date: "Aug 19 2025"
-tags: ["website", "tutorial"]
+tags: ["project", "website"]
 ---
 
 
