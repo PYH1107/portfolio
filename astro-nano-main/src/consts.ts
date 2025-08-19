@@ -26,7 +26,7 @@ export const JOTTINGS = {
 export const SOCIALS: Socials = [
   { 
     NAME: "twitter-x",
-    HREF: "https://twitter.com/markhorn_dev",
+    HREF: "https://x.com/maypan1107",
   },
   { 
     NAME: "github",
