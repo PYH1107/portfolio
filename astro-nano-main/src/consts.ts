@@ -3,7 +3,7 @@ import type { Site, Metadata, Socials } from "@types";
 export const SITE: Site = {
   NAME: "Yun-Huei Pan",
   EMAIL: "maypan1107@gmail.com",
-  NUM_POSTS_ON_HOMEPAGE: 1,
+  NUM_POSTS_ON_HOMEPAGE: 2,
   NUM_JOTTINGS_ON_HOMEPAGE: 2,
 };
 
