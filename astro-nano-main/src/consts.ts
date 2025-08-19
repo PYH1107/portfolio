@@ -35,5 +35,9 @@ export const SOCIALS: Socials = [
   { 
     NAME: "linkedin",
     HREF: "https://www.linkedin.com/in/yun-huei-pan/",
+  },
+  {
+    NAME: "discord",
+    HREF: "https://discord.com/users/874451446802817044"
   }
 ];
