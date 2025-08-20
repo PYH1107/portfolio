@@ -27,17 +27,68 @@ const { href, fallback = "/" } = Astro.props;
 
 <script is:inline>
   function handleBackClick(button) {
-    console.log('Back button clicked'); // 調試用
+    console.log('Back button clicked');
     
-    // 嘗試回到上一頁
-    if (document.referrer && document.referrer !== window.location.href) {
-      console.log('Going back to:', document.referrer);
-      window.history.back();
+    const currentUrl = new URL(window.location.href);
+    const currentPage = currentUrl.origin + currentUrl.pathname;
+    
+    // 計算需要回退多少步來找到不同頁面
+    function findDifferentPage() {
+      // 檢查多個歷史步驟，找到第一個不同頁面
+      let maxSteps = Math.min(10, window.history.length - 1);
+      
+      // 使用遞迴方式嘗試不同步數
+      function trySteps(steps) {
+        if (steps > maxSteps) {
+          // 找不到不同頁面，使用 fallback
+          console.log('No different page found, using fallback');
+          const fallback = button.getAttribute('data-fallback') || '/';
+          const href = button.getAttribute('data-href') || fallback;
+          window.location.href = href;
+          return;
+        }
+        
+        // 先保存當前狀態
+        const originalUrl = window.location.href;
+        
+        // 設置一個檢查點
+        function checkAfterNavigation() {
+          const newUrl = new URL(window.location.href);
+          const newPage = newUrl.origin + newUrl.pathname;
+          
+          if (newPage !== currentPage) {
+            console.log(`Found different page after ${steps} steps:`, window.location.href);
+            // 找到了不同頁面，停留在這裡
+            return;
+          } else {
+            // 還是同一頁面，繼續嘗試更多步驟
+            console.log(`Still same page after ${steps} steps, trying ${steps + 1}`);
+            trySteps(steps + 1);
+          }
+        }
+        
+        // 監聽導航完成
+        function onPopState() {
+          window.removeEventListener('popstate', onPopState);
+          setTimeout(checkAfterNavigation, 0); // 確保 URL 已更新
+        }
+        
+        window.addEventListener('popstate', onPopState);
+        window.history.go(-steps);
+      }
+      
+      // 開始嘗試，從 1 步開始
+      trySteps(1);
+    }
+    
+    // 如果有足夠的歷史記錄，開始尋找
+    if (window.history.length > 1) {
+      findDifferentPage();
     } else {
-      // 如果沒有 referrer，使用 fallback
+      // 沒有歷史記錄，直接使用 fallback
+      console.log('No history available, using fallback');
       const fallback = button.getAttribute('data-fallback') || '/';
       const href = button.getAttribute('data-href') || fallback;
-      console.log('No referrer, going to fallback:', fallback);
       window.location.href = href;
     }
   }
