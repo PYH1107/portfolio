@@ -22,7 +22,7 @@ WebRing 是上世紀 Web1.0 的遺跡，其運作方式為：
 
 >" *To be a part of the webring, each site has a common [navigation bar](https://en.wikipedia.org/wiki/Navigation_bar "Navigation bar"); it contains links to the previous and next sites. By selecting next (or previous) repeatedly, the user will eventually reach the site they started at; this is the origin of the term 'webring'.* "
 >
->（每個加入 webring 的網站都有一個共同的導航欄，包含「上一個」和「下一個」網站的連結。通過重複點選「下一個」（或「上一個），用戶最終會回到他們開始的網站 - 這就是「webring」一詞的起源）
+>（每個加入 webring 的網站都有一個共同的導航欄，包含「上一個」和「下一個」網站的連結。通過重複點選「下一個」（或「上一個」），用戶最終會回到他們開始的網站，這就是「webring」一詞的起源）
 
 
 ## IndieWeb Webring
