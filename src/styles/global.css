@@ -57,6 +57,19 @@ article {
     @apply decoration-black/25 dark:decoration-white/50;
   }
   
+  /* Remove blockquote auto quotes and italic */
+  article blockquote {
+    @apply font-normal not-italic;
+  }
+  
+  article blockquote p:first-of-type::before {
+    content: none;
+  }
+  
+  article blockquote p:last-of-type::after {
+    content: none;
+  }
+  
   /* Inline code styling */
   article :not(pre) > code {
     @apply bg-stone-200 dark:bg-stone-700;
