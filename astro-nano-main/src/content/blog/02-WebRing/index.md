@@ -19,7 +19,7 @@ WebRing 是上世紀 Web1.0 的遺跡，其運作方式為：
 
 >"*To be a part of the webring, each site has a common [navigation bar](https://en.wikipedia.org/wiki/Navigation_bar "Navigation bar"); it contains links to the previous and next sites. By selecting next (or previous) repeatedly, the user will eventually reach the site they started at; this is the origin of the term "webring."*
 >
-（每個加入 webring 的網站都有一個共同的導航欄，包含「上一個」和「下一個」網站的連結。通過重複點選「下一個」（或「上一個），用戶最終會回到他們開始的網站 - 這就是「webring」一詞的起源）
+>（每個加入 webring 的網站都有一個共同的導航欄，包含「上一個」和「下一個」網站的連結。通過重複點選「下一個」（或「上一個），用戶最終會回到他們開始的網站 - 這就是「webring」一詞的起源）
 
 
 ## IndieWeb Webring
@@ -67,9 +67,11 @@ IndieWeb 提供 WordPress 用戶提供了免費插件：[IndieAuth](https://word
 
 加到任何地方都可以。我選擇添加到 footer 中，讓瀏覽者可以隨時點選，也有人選擇添加到某篇特定的文章中，全憑使用者喜好。
 
-**AND WE'RE DONE!!**
+**AND WE'RE DONE!!** 這樣就成功設定好 Webring 功能了。
 
-這樣就成功設定好 Webring 功能了。對於 GenZ 我本人來說，這個設計實在趣味與實用兼具，怎麼也想不到是 SEO 出現之前的上古產物。但在今天，從 IndieWeb 到 [Fediring](https://fediring.net/)，開始有許多人將 Web3.0 的概念融入進來。我們從獨立的個體，經歷了中心化平台的聚合，如今又重新回歸獨立的個體。
+$\;$
+
+對於 GenZ 我本人來說，這個設計實在趣味與實用兼具，怎麼也想不到是 SEO 出現之前的上古產物。但在今天，從 IndieWeb 到 [Fediring](https://fediring.net/)，開始有許多人將 Web3.0 的概念融入進來。我們從獨立的個體，經歷了中心化平台的聚合，如今又重新回歸獨立的個體。
 
 儘管環境早已與往昔大相徑庭，但萬變不離其宗，網路（此刻說「互聯網」似乎更為準確）的訴求與願景似乎未曾改變過。
 
