@@ -1,6 +1,6 @@
 ---
 title: "Webring 介紹與教學"
-description: "我在 footer 放了什麼？"
+description: "蜘蛛網與戒指 🕸️💍"
 date: "Aug 19 2025"
 tags: ["project", "website"]
 ---
