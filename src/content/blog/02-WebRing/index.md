@@ -7,6 +7,8 @@ tags: ["project", "website"]
 
 > 本網站遵守 [IndieWeb 規範](https://indieweb.org/principles)，網域與資料皆為我個人所有。
 
+---
+
 如果把這頁往下滑到底，應該會看到有一個 "🕸️ Indie 💍" 的圖示。點下去，立刻就會隨機跳轉到其他人的部落格。
 所以這到底是什麼？
 
