@@ -10,7 +10,8 @@ export default {
     extend: {
       fontFamily: {
         sans: [
-          "Inter", 
+          "Inter",
+          "Noto Sans SC",
           "Noto Sans TC", 
           "PingFang SC", 
           "Hiragino Sans GB", 
