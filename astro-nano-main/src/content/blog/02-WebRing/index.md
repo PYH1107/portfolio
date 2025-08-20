@@ -5,6 +5,7 @@ date: "Aug 19 2025"
 tags: ["project", "website"]
 ---
 
+> 本網站遵守 [IndieWeb 規範](https://indieweb.org/principles)，網域與資料皆為我個人所有。
 
 如果把這頁往下滑到底，應該會看到有一個 "🕸️ Indie 💍" 的圖示。點下去，立刻就會隨機跳轉到其他人的部落格。
 所以這到底是什麼？
@@ -47,7 +48,8 @@ IndieWeb 提供 WordPress 用戶提供了免費插件：[IndieAuth](https://word
 ```
 
 以 Astro 為例，我在 `src > components > Head.Astro` 添加了我個人的 GitHub 主頁。
-這邊的方法不唯一，也可以使用 email 之類的方式，詳見：[How to Set Up Your Website for IndieLogin.com](https://indielogin.com/setup)
+
+- 注意，這邊的方法不唯一，也可以使用 email 之類的方式，詳見：[How to Set Up Your Website for IndieLogin.com](https://indielogin.com/setup)
 
 ## Step 2: verify your identity
 
@@ -67,7 +69,7 @@ IndieWeb 提供 WordPress 用戶提供了免費插件：[IndieAuth](https://word
 
 加到任何地方都可以。我選擇添加到 footer 中，讓瀏覽者可以隨時點選，也有人選擇添加到某篇特定的文章中，全憑使用者喜好。
 
-**AND WE'RE DONE!!** 這樣就成功設定好 Webring 功能了。
+**AND WE'RE DONE!!** 我還有很多功能沒提到，比如 Webmention、WebSub ⋯⋯，但基本上這樣就成功設定好 Webring 功能了。
 
 $\;$
 
