@@ -27,7 +27,7 @@ WebRing 是上世紀 Web1.0 的遺跡，其運作方式為：
 
 ## IndieWeb Webring
 
-受沈浸式翻譯作者，Owen Young 啟發，我使用的是 [IndieWeb Webring](https://indieweb.org/IndieWeb_Webring)。在 Web2.0 邁向 Web3.0 的今天，Webring 服務雖不再是大勢所趨，但依然是許多開發者的心頭好，許多人也選擇同時加入多個 Webring 使自己的內容更容易被看見。
+受沈浸式翻譯作者，Owen Young 啟發，我使用的是 [IndieWeb Webring](https://indieweb.org/IndieWeb_Webring)。在 Web2.0 邁向 Web3.0 的今天，Webring 服務雖不再是大勢所趨，但依然是不少開發者的心頭好，許多人也選擇同時加入多個 Webring 使自己的內容更容易被看見。
 
 我近期頻繁瀏覽的網站中，不少就是在透過 IndieWeb Webring 隨機翻看他人部落格時意外發現的，其社群方向以及內容品質深得我心。除此之外，根據[官方註冊說明](https://indieweb.org/IndieAuth)所述，它主張的哲學十分有趣，頗有種 Web3.0 與 Web1.0 遙相呼應的味道：
 
