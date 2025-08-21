@@ -13,6 +13,8 @@ tags: ["website", "recommedations"]
 4. [Pin 起來](https://pinchlime.com/)
 5. [Andy's Working Note](https://notes.andymatuschak.org/About_these_notes)
 6. [TINIBLOG](https://blog.tinikov.com/)
+7. [Sheracaolity](https://sheracaolity.ghost.io/)
+
 
 - 我喜歡三不五時翻一翻 WebRing，總是能有些新奇的發現。
 
