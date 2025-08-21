@@ -106,6 +106,17 @@ article {
     content: "↩";
     font-size: 0.875rem;
   }
+  
+  /* Footnote highlight animation */
+  @keyframes footnote-flash {
+    0% { background-color: transparent; }
+    50% { background-color: rgba(59, 130, 246, 0.3); }
+    100% { background-color: transparent; }
+  }
+  
+  .footnote-highlight {
+    animation: footnote-flash 1.5s ease-in-out;
+  }
 }
 
 .animate {

@@ -66,4 +66,59 @@ const { title, description } = Astro.props;
     </main>
     <Footer />
   </body>
+  <script>
+    // Footnote highlight functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Footnote script loaded');
+      
+      // Find all footnote-related elements
+      const footnoteRefs = document.querySelectorAll('a[data-footnote-ref], a[href^="#user-content-fn-"]');
+      const footnoteBackrefs = document.querySelectorAll('a[data-footnote-backref], a[href^="#user-content-fnref-"]');
+      
+      console.log('Found footnote refs:', footnoteRefs.length);
+      console.log('Found footnote backrefs:', footnoteBackrefs.length);
+
+      // Handle clicks on footnote references (in text)
+      footnoteRefs.forEach(link => {
+        link.addEventListener('click', function(e) {
+          console.log('Footnote ref clicked:', this);
+          const href = this.getAttribute('href');
+          if (href) {
+            setTimeout(() => {
+              const target = document.querySelector(href);
+              console.log('Target found:', target);
+              if (target) {
+                target.classList.add('footnote-highlight');
+                console.log('Added highlight class');
+                setTimeout(() => {
+                  target.classList.remove('footnote-highlight');
+                }, 1500);
+              }
+            }, 100);
+          }
+        });
+      });
+
+      // Handle clicks on footnote back references (back to text)
+      footnoteBackrefs.forEach(link => {
+        link.addEventListener('click', function(e) {
+          console.log('Footnote backref clicked:', this);
+          const href = this.getAttribute('href');
+          if (href) {
+            setTimeout(() => {
+              const target = document.querySelector(href);
+              console.log('Target found:', target);
+              if (target) {
+                target.classList.add('footnote-highlight');
+                console.log('Added highlight class');
+                setTimeout(() => {
+                  target.classList.remove('footnote-highlight');
+                }, 1500);
+              }
+            }, 100);
+          }
+        });
+      });
+    });
+  </script>
 </html>
