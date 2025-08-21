@@ -48,8 +48,6 @@ const { href, fallback = "/" } = Astro.props;
           return;
         }
         
-        // 先保存當前狀態
-        const originalUrl = window.location.href;
         
         // 設置一個檢查點
         function checkAfterNavigation() {
