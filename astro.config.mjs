@@ -12,7 +12,7 @@ export default defineConfig({
   
   integrations: [
     mdx({
-      remarkPlugins: [remarkMath, remarkGfm, remarkNumberedFootnoteLabels],
+      remarkPlugins: [remarkMath, remarkGfm],
       rehypePlugins: [
         [rehypeKatex, {
           // 關鍵配置！

@@ -95,11 +95,16 @@ article {
     @apply no-underline;
   }
   
-  /* Hide footnote back reference */
-  article .footnote-backref,
-  article a[href^="#fnref-"],
+  /* Style footnote back reference */
   article a[data-footnote-backref] {
-    @apply hidden;
+    @apply no-underline;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 0;
+  }
+  
+  article a[data-footnote-backref]::before {
+    content: "↩";
+    font-size: 0.875rem;
   }
 }
 
