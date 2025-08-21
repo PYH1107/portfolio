@@ -46,6 +46,15 @@ article {
   @apply prose-h1:text-[1.675rem] prose-h2:text-[1.6rem];
 }
 
+/* Custom heading spacing */
+article h1 {
+  @apply mt-6 mb-4;
+}
+
+article h2 {
+  @apply mt-8 mb-4;
+}
+
 @layer utilities {
   article a {
     @apply font-sans text-current underline underline-offset-2;
