@@ -8,9 +8,10 @@ tags: ["research"]
 本文由 Claude Sonnet 4 進行大範圍的網站查找與初步答疑，並由人工進行詮釋、加註、查證與撰寫。
 如果發現疏漏或者想要提供建議，歡迎透過 [DC](https://discord.com/users/874451446802817044) 與 [email](mailto:maypan1107@gmail.com) 聯繫我。
 
+
 ---
 
-起因：在 [Gatsby框架的缺点](https://www.owenyoung.com/blog/gatsby-cons/)看到這樣一句話：
+起因：前幾天我在滑手機的時候，在 [Gatsby框架的缺点](https://www.owenyoung.com/blog/gatsby-cons/)看到這樣一句話：
 
 >*Gatsby 的大多数功能都是通过插件提供，导致项目有大量的第三方依赖（也有很多是官方维护的插件），而 Nodejs 的`package-lock.json`总是在升级的时候搞错一些版本，让我很抓狂（我不确定这个问题有没有得到解决），对于多依赖项目，我经常需要删掉整个 lock 文件，然后重新生成新的 lock 索引。*
 
