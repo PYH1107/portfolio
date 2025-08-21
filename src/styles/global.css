@@ -89,6 +89,18 @@ article {
   article pre code {
     @apply bg-transparent text-inherit p-0;
   }
+  
+  /* Footnote link styling - remove underline */
+  article .footnote-ref {
+    @apply no-underline;
+  }
+  
+  /* Hide footnote back reference */
+  article .footnote-backref,
+  article a[href^="#fnref-"],
+  article a[data-footnote-backref] {
+    @apply hidden;
+  }
 }
 
 .animate {

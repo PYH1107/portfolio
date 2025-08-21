@@ -4,13 +4,15 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import remarkGfm from 'remark-gfm';
+import remarkNumberedFootnoteLabels from 'remark-numbered-footnote-labels';
 
 export default defineConfig({
   site: "https://your-site.vercel.app",
   
   integrations: [
     mdx({
-      remarkPlugins: [remarkMath],
+      remarkPlugins: [remarkMath, remarkGfm, remarkNumberedFootnoteLabels],
       rehypePlugins: [
         [rehypeKatex, {
           // 關鍵配置！
@@ -38,7 +40,7 @@ export default defineConfig({
   // 全域 Markdown 配置
   markdown: {
     extendDefaultPlugins: true, 
-    remarkPlugins: [remarkMath],
+    remarkPlugins: [remarkMath, remarkGfm, remarkNumberedFootnoteLabels],
     rehypePlugins: [
       [rehypeKatex, {
         displayMode: true,
