@@ -21,6 +21,7 @@ body {
   @apply flex flex-col;
   @apply bg-stone-100 dark:bg-stone-900;
   @apply text-black/50 dark:text-white/75;
+  font-family: Inter, "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
   font-feature-settings: "kern" 1;
   text-rendering: optimizeLegibility;
 }
@@ -48,6 +49,11 @@ article {
   text-wrap: pretty;
   hanging-punctuation: first last;
   line-break: strict;
+}
+
+/* Better font stack for serif text including Chinese */
+article p, article blockquote, article li {
+  font-family: Lora, "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
 }
 
 /* Custom heading spacing */
