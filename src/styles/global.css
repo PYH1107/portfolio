@@ -49,10 +49,20 @@ article {
 /* Custom heading spacing */
 article h1 {
   @apply mt-6 mb-4;
+  scroll-margin-top: 6rem; /* Offset for fixed header */
 }
 
 article h2 {
   @apply mt-8 mb-4;
+  scroll-margin-top: 6rem; /* Offset for fixed header */
+}
+
+article h3 {
+  scroll-margin-top: 6rem; /* Offset for fixed header */
+}
+
+article h4, article h5, article h6 {
+  scroll-margin-top: 6rem; /* Offset for fixed header */
 }
 
 @layer utilities {
