@@ -90,9 +90,16 @@ article {
     @apply bg-transparent text-inherit p-0;
   }
   
-  /* Footnote link styling - remove underline */
-  article .footnote-ref {
+  /* Footnote link styling - remove underline and add color */
+  article .footnote-ref,
+  article a[data-footnote-ref] {
     @apply no-underline;
+    color: #1e40af !important; /* Blue-700 */
+  }
+  
+  html.dark article .footnote-ref,
+  html.dark article a[data-footnote-ref] {
+    color: #60a5fa !important; /* Blue-400 for dark mode */
   }
   
   /* Style footnote back reference */
