@@ -21,7 +21,7 @@ tags: ["research"]
 ---
 # 歷史
 
-## JavaScript 的 "Script" [^1]
+## JavaScript 的 "Script"
 
 JavaScript 由 Brendan Eich 於 1995 年在 Netscape Communications 創造。最初叫做 LiveScript，用來作為公司旗艦瀏覽器 Netscape Navigator 的腳本語言，配合實現互動功能，而非一個完整的標準程式語言。
 
@@ -123,7 +123,7 @@ npm 官方部落格文章：[kik, left-pad, and npm](https://blog.npmjs.org/post
 事實上，許多框架為了避免過度依賴，經常有意識地限制外部依賴的數量，或者將核心功能內建到框架中。比如 Next.js、Vue.js 等。此外，Ryan Dahl  本人也曾於 JSConf 上公開發表過他對 Node.js 的十大遺憾，並且同時也在開發名叫 Deno 的新產品，試著以一打二，取代如今 「Node.js + npm 」的組合。
 
 
-JavaScript 生態系的今天，儼然是偶然中的必然，命名本身的 "script" 一詞，就已經將它的身世昭告天下。甚至，ES6 (ES: ECMAScript，是 JavaScript 的正式標準名稱；6 代表第六代) 發佈於 2015 年，但 Node.js 因技術問題直到 2019 年才對新版 ES 提供了實驗性支援。這四年的空白期導致既有的框架如 React、Vue CLI、Expo ⋯⋯至今仍嚴重依賴 Babel 等轉譯工具，更加劇了 JavaScript 生態的問題。
+JavaScript 生態系的今天，儼然是偶然中的必然，命名本身的 "script" 一詞，就已經將它的身世昭告天下。甚至，ES6 (ES: ECMAScript，是 JavaScript 的正式標準名稱；6 代表第六代) 發佈於 2015 年，但 Node.js 因技術問題直到 2019 年才對新版 ES 提供了實驗性支援。這四年的空白期導致既有的框架如 React、Vue CLI、Expo ⋯⋯至今仍嚴重依賴 Babel 等轉譯工具，更加劇了 JavaScript 生態的問題。[^7]
 
 回扣此文標題，如果要問誰是罪魁禍首，只能說今天的所有一切現狀，都源自於歷史的每一步。
 
@@ -136,6 +136,7 @@ JavaScript 生態系的今天，儼然是偶然中的必然，命名本身的 "s
 [^4]: [Unix Philosophy and Node.js](https://blog.izs.me/2013/04/unix-philosophy-and-nodejs/), by  [Isaac Z. Schlueter](https://izs.me/)
 [^5]: [Ryan Dahl: Node.js, Evented I/O for V8 Javascript](https://www.jsconf.eu/2009/speaker/speakers_selected.html)
 [^6]: [The Rising Threat of Software Supply Chain Attacks: Managing Dependencies of Open Source Projects](https://openssf.org/blog/2023/08/18/the-rising-threat-of-software-supply-chain-attacks-managing-dependencies-of-open-source-projects/)by Open Source Security Foundation
+[^7]: [ES2015 module detection in Node.js](https://es2015-node.js.org/)
 
 
 
