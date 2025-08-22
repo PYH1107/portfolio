@@ -98,7 +98,7 @@ npm 生態系統深受 Unix 哲學影響：「做一件事並把它做好 (Do On
 
 然而， Unix 哲學原本是針對程式 (programs) 而非庫 (libraries) 所設計。Unix programs 通過管道 (pipe) 連接，使之成為一種線性的組合，而 npm packages 則互依賴，導致後者的複雜程度遠遠高於前者。
 
-2020 年的[一個研究](https://i.blackhat.com/USA-20/Wednesday/us-20-Edwards-The-Devils-In-The-Dependency-Data-Driven-Software-Composition-Analysis.pdf)顯示，典型的 JavaScript 程式依賴於 377 個套件，10% 的專案依賴超過 1,400 個第三方庫。[^6]
+2020 年的[一個研究](https://i.blackhat.com/USA-20/Wednesday/us-20-Edwards-The-Devils-In-The-Dependency-Data-Driven-Software-Composition-Analysis.pdf)顯示，典型的 JavaScript 程式依賴於 377 個套件，10% 的專案依賴超過 1,400 個第三方庫 (third party library)。[^6]
 
 #### 歷史事件：left-pad
 
