@@ -16,5 +16,9 @@ tags: ["website", "recommedations"]
 7. [Sheracaolity](https://sheracaolity.ghost.io/)
 8. [The Wine Guy](https://blog.jameshsu.csie.org/)
 
+
+# 資訊來源
+1. [Hacker News](https://news.ycombinator.com/newest)
+
 - 我喜歡三不五時翻一翻 WebRing，總是能有些新奇的發現。
 
