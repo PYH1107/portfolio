@@ -76,7 +76,7 @@ JavaScript 由 Brendan Eich 於 1995 年在 Netscape Communications 創造。最
 
 ## npm: problem solver or trouble maker?
 
-Ruby 有 RubyGems，Python 有 pip，JavaScript 呢？解決了 JavaScript 缺發原生 System-level I/O 的問題，仍然有一個巨大的缺陷必須克服——**標準庫的不完整**。
+Ruby 有 RubyGems，Python 有 pip，JavaScript 呢？解決了 JavaScript 缺乏原生 System-level I/O 的問題，仍然有一個巨大的缺陷必須克服——**標準庫的不完整**。
 
 npm 全名叫做 Node Package Manager，由 Node.js 的重要推手之一——Isaac Z. Schlueter——在 2010 年推出，是一種基於 Node.js 的套件管理工具，讓使用者得以：
 
