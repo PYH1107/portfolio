@@ -88,8 +88,11 @@ const { title, description } = Astro.props;
             const target = document.querySelector(href);
             console.log('Target found:', target);
             if (target) {
-              // Scroll to target
-              target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              // Scroll to target with header offset
+              const headerHeight = 96; // 6rem = 96px
+              const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+              const offsetPosition = elementPosition - headerHeight;
+              window.scrollTo({ top: offsetPosition, behavior: 'instant' });
               // Add highlight
               target.classList.add('footnote-highlight');
               console.log('Added highlight class');
@@ -112,7 +115,7 @@ const { title, description } = Astro.props;
             console.log('Target found:', target);
             if (target) {
               // Scroll to target
-              target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              target.scrollIntoView({ behavior: 'instant', block: 'center' });
               // Add highlight
               target.classList.add('footnote-highlight');
               console.log('Added highlight class');
