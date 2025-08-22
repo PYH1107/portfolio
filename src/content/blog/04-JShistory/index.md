@@ -96,7 +96,7 @@ npm 全名叫做 Node Package Manager，由 Node.js 的重要推手之一——I
 
 npm 生態系統深受 Unix 哲學影響：「做一件事並把它做好 (Do One Thing and Do It Well) 」，強調構建小而專注的模組。核心原則是：「每個模組只做一件事，並且做到最好，使之易於與其他程式組合」（用現代話來說就是：不要重複造輪子）。[^4]
 
-然而， Unix 哲學原本是針對程序 (programs) 而非庫 (libraries) 所設計。Unix programs 通過管道 (pipe) 連接，使之成為一種線性的組合，而 npm packages 則互依賴，導致後者的複雜程度遠遠高於前者。
+然而， Unix 哲學原本是針對程式 (programs) 而非庫 (libraries) 所設計。Unix programs 通過管道 (pipe) 連接，使之成為一種線性的組合，而 npm packages 則互依賴，導致後者的複雜程度遠遠高於前者。
 
 2020 年的[一個研究](https://i.blackhat.com/USA-20/Wednesday/us-20-Edwards-The-Devils-In-The-Dependency-Data-Driven-Software-Composition-Analysis.pdf)顯示，典型的 JavaScript 程序依賴於 377 個套件，10% 的專案依賴超過 1,400 個第三方庫。[^6]
 
