@@ -121,7 +121,7 @@ npm 官方部落格文章：[kik, left-pad, and npm](https://blog.npmjs.org/post
 
 回到我們最一開始的問題，為什麼博客作者要特別強調 [Gatsby.js](https://www.gatsbyjs.com/)的缺點？
 
-事實上，許多框架為了避免過度依賴，經常有意識地限制外部依賴的數量，或者將核心功能內建到框架中，比如 Next.js、Vue.js 等。此外，Ryan Dahl  本人也曾於 JSConf 上公開發表過他對 Node.js 的十大遺憾，並且同時也在開發名叫 Deno 的新產品，試著以一打二，取代如今 「Node.js + npm 」的組合。
+事實上，許多框架為了避免過度依賴，經常有意識地限制外部依賴的數量，或者將核心功能內建到框架中，比如 Next.js、Vue.js 等。此外，Ryan Dahl  本人也曾於 JSConf 上公開發表過他對 Node.js 的十大遺憾，並且正在開發名叫 Deno 的新產品，試著以一打二，取代如今 「Node.js + npm 」的組合。
 
 
 JavaScript 生態系的今天，儼然是偶然中的必然，命名本身的 "script" 一詞，就已經將它的身世昭告天下。甚至，ES6 (ES: ECMAScript，是 JavaScript 的正式標準名稱；6 代表第六代) 發佈於 2015 年，但 Node.js 因技術問題直到 2019 年才對新版 ES 提供了實驗性支援。這四年的空白期導致既有的框架如 React、Vue CLI、Expo ⋯⋯至今仍嚴重依賴 Babel 等轉譯工具，更加劇了 JavaScript 生態的問題。[^7]
