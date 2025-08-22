@@ -8,7 +8,7 @@ import remarkGfm from 'remark-gfm';
 import remarkNumberedFootnoteLabels from 'remark-numbered-footnote-labels';
 
 export default defineConfig({
-  site: "https://your-site.vercel.app",
+  site: "https://yhpan.me",
   
   integrations: [
     mdx({
