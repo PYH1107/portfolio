@@ -107,7 +107,7 @@ npm 官方部落格文章：[kik, left-pad, and npm](https://blog.npmjs.org/post
 `kik` 套件的創作者 Azer Koçulu 因命名問題與同名公司 Kik Interactive 發生爭執，為了確保 npm 使用者能取得預期的套件，npm 官方認為 "kik" 名稱（非內容本身）的所有權應歸給 Kik Interactive。
 
 
-出於對裁撤的不滿，Azer 在無預警的情況下取消發佈了 `kik` 及其他 272 個套件，其中包括 `left-pad`。儘管 `left-pad` 本身是一個僅有 11 行程式碼的套件， Azer 的舉動依然導致無數相互依賴的套件無法使用（包括知名的 babel、atom 等），使的全球每分鐘發生數百次的請求失敗。
+出於對裁撤的不滿，Azer 在無預警的情況下刪除了已經發布的 `kik` 及其他 272 個套件，其中包括 `left-pad`。儘管 `left-pad` 本身是一個僅有 11 行程式碼的套件， Azer 的舉動依然導致無數相互依賴的套件無法使用（包括知名的 babel、atom 等），使的全球每分鐘發生數百次的請求失敗。
 
 
 ### (2) 太容易發佈
