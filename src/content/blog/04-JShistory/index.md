@@ -5,7 +5,7 @@ date: "Aug 21 2025"
 tags: ["research"]
 ---
 
-本文由 Claude Sonnet 4 進行大範圍的網站查找與初步答疑，並由人工進行詮釋、加註、查證與撰寫。
+本文由 Claude Sonnet 4 進行大範圍的資料查找與初步答疑，並由人工進行詮釋、加註、查證與撰寫。
 如果發現疏漏或者想要提供建議，歡迎透過 [DC](https://discord.com/users/874451446802817044) 與 [email](mailto:maypan1107@gmail.com) 聯繫我。
 
 
