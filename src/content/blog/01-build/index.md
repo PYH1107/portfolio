@@ -40,11 +40,11 @@ AI 時代，「有」已經不再稀奇，在「有」之上的是「合適的�
 	- 很窮，希望都可以免費
 
 
-### Step 3. 實務經驗考量（發散）
+## Step 3. 實務經驗考量（發散）
 對於純新手來說，開始之前回顧自己擅長的語言以及對於後端的需求是重要的。再不濟，思考一個「AI 擅長」的語言也是一個解決方法。比如 JavaScript 和 python 通常可以比較輕意義地被解決（ [Reddit 論壇](https://www.reddit.com/r/singularity/comments/1gvyun0/what_programming_languages_is_ai_best_at_writing/)如是說，我個人體感也是如此）。
 
 
-### Step 4. 統整（收斂）
+## Step 4. 統整（收斂）
 
 以上思考的面向，我覺得可以被整理成幾個問題：
 1. 架設網站的目的？
@@ -70,6 +70,8 @@ AI 時代，「有」已經不再稀奇，在「有」之上的是「合適的�
 
 
 雖然 Ghost 看上去是一個擴充性高，可以海納未來各種設計的方案，但我重視**內容大於設計**，所以最終還是選擇了 Astro。
+
+---
 
 # How
 
@@ -152,8 +154,64 @@ $\;$
 
 ### 方法二：個人網域部署
 
+### 2-1 register domain
+我是透過 NameCheap 購買域名，因為它最便宜，並且往上普遍對其客服態度有較佳的評價，畢竟是跨國購物，總難免擔心有糾紛，希望可以用最高效、溫和的方式處理。
+
+進入 [NameCheap](https://www.namecheap.com/)  後，首先在搜尋框輸入想要的 domain 名稱，接下來即可確認是否已經被註冊。
+在 Top-Level Domain (TLD) 方面，考量到用途與價格，我沒有選擇一般網頁常見的 「.com」或者「.io」，而是選擇購買「.me」。
+一接著會有一堆選項可以選擇，以下是我購買的設定方案：
+
+| 項目                                  | 要不要買/設定 | 說明                                     |
+| ----------------------------------- | ------- | -------------------------------------- |
+| **Domain Registration**<br>(網域註冊年限) | Y       | 我是是三分鐘熱度新手，所以只買 1 年試水溫                 |
+| **Auto-Renew**<br>(自動續約)            | Y       | 1. 避免忘記續約被搶走 <br>2. 後台可隨時關閉            |
+| **WhoisGuard**<br>(隱私保護)            | Y       | 1. free<br>2. 保護個資不被公開查詢               |
+| **PremiumDNS**                      | N       | 個人網站用不到這麼高級（沒有速度要求，也沒有很多子網域）           |
+| **SSL Certificate**                 | N       | 因為依然打算使用 Vercel 部署，Vercel 會提供          |
+| **Professional Email**              | N       | 我不需要客製信箱                               |
+| **Web Hosting**                     | N       | 使用 Vercel 部署不需主機                       |
+| **VPS/Dedicated Server**            | N       | 靜態網站用不到（沒有要部署後端，即使有後端 supabase 之類的也堪用） |
 
 
+### 2-2 deploy on Vercel
+
+**首先到 Vercel 這邊**，
+1. 進入專案 → Settings → Domains
+2. 點擊 Domains 並選選擇 Add Domain ，接著輸入剛剛購買的網域
+3. 點擊 "Add"
+4. Vercel 會顯示 Invalid Configuration，因為 NameCheap 那邊的 DNS 還沒設置好。把 DNS Records 記好，稍後填入 NameCheap 中。如下圖：
+![alt text](image.png)
+
+**首先到 NameCheap 這邊**，
+1. 登入 Namecheap Dashboard
+2. 找到自己的網域,點擊 "Manage"
+3. 點擊 "Advanced DNS"，新增兩筆記錄：
+	- A Record:
+		- Type: A
+		- Host: @
+		- Value: 
+			- 這個是 Vercel 的 IP address，比如上述範例中就是 `216.198.79.1`
+		- TTL: Automatic
+	- CNAME Record:
+		- Type: CNAME
+		- Host: www
+		- Value: cname.vercel-dns.com
+		- TTL: Automatic
+4. 儲存設定
+
+**然後回到 Vercel**
+
+- Vercel 會問說這個網域是不是直接指定為 production，意思是你在 GitHub 更新什麼都會直接連動，不會有一個「檢查」的關卡。如果只是做靜態網站的話，那直接上 production 可以被視作一個有點小偷懶但並無不可的方法。
+- 另外，Vercel 也會貼心問你說要不要自動把 `www` 導向 `https://`，這邊基於安全，同時也是 Vercel 的建議，保持預設選項勾選就可以了。
+
+
+
+**等待生效:**
+1.  DNS 更新需要時間，官方說法是會花通常 30 分鐘到 48 小時，但我的經驗裡大概十五分鐘內可以完成
+2. 實在不放心，可以回到 Vercel 檢查部署狀態，也可以用 [DNS Checker](https://dnschecker.org/) 查看是否生效
+3. 生效後 Vercel 會自動配置 HTTPS 憑證（超棒的功能！）
+
+---
 # Appendix: 我自訂的功能
 
 ### LaTeX
@@ -177,7 +235,7 @@ $\;$
 
 
 ---
-$\;$
+
 
 以上就是我架設個人網站的完整過程。對於整個過程，我的心得有點庸俗，不外乎就是「內容」的重要性，與「文字」和「紀錄」的價值，然事實也確實如此。「設計」跟「定位」花我最多時間思考，甚至本文的撰寫時常，也遠超寫程式的時間。
 
