@@ -57,7 +57,7 @@ AI 時代，「有」已經不再稀奇，在「有」之上的是「合適的�
 4. 有多少時間來實作（希望盡善盡美或者逐步迭代）？
 5. 熟悉哪些程式語言或者框架？
 
-從今年四月我就在初步規劃個人網站，依照上面的條件，我有在觀望的框架是 [Ghost ](https://ghost.org/)、[Jekyll](https://github.com/maximevaillancourt/digital-garden-jekyll-template) 以及 [Astro](https://docs.astro.build/en/getting-started/)。
+從今年四月我就在初步規劃個人網站，依照上面的條件，我有在觀望的框架是 [Ghost ](https://ghost.org/)、[Jekyll](https://github.com/maximevaillancourt/digital-garden-jekyll-template)、[Astro](https://docs.astro.build/en/getting-started/) 以及 [Zola](https://www.getzola.org/)。
 
 
 |        |                                                                                         |                                                |
