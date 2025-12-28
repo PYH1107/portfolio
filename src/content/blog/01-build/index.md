@@ -13,11 +13,21 @@ tags: ["project", "AI"]
 
 AI 時代，「有」已經不再稀奇，在「有」之上的是「合適的有」、「持之以恆的有」，所以在此之前，我們得先定義「合適」，用想法來去定義。先清楚自己的構想，才能找到最合適、（於自己而言）最好的工具。
 
+**注意**
+
+本文省去通用性高、無特殊亮點的三個步驟，詳細操作推薦閱讀：
+1. 下載 node.js
+	- [在 Windows 上安裝 Node.js](https://learn.microsoft.com/zh-tw/windows/dev-environment/javascript/nodejs-on-windows)
+	- [How To Install Node.js on Mac / MacOS (2025)](https://www.youtube.com/watch?v=0LWJ3gmScUY)
+2. 下載 Astro Nano
+3. 下載 Git 並上傳 GitHub
+	- 也可以直接用 GitHub Desktop
+
 
 # What & Why
 
 ## Step 1. 參考資料（發散）
-我首先上網查詢今天所流行的個人網站框架，也搜集了一些我追蹤的企業家、KOL 甚至身邊友人架設個人網站的方法，關於我怎麼搜集以及平常都關心哪些網站，可以參考這篇：[我定期翻閱的網站們](https://yhpan.me/blog/03-favweb)。
+我首先上網查詢今天所流行的個人網站框架，也搜集了一些我追蹤的企業家、KOL 甚至身邊友人架設個人網站的方法，關於我怎麼搜集以及平常都關心哪些網站，可以參考這篇：[我不定期翻閱的網站們](https://yhpan.me/blog/03-favweb)。
 
 ## Step 2. 我想要什麼（收斂）
 
@@ -120,23 +130,6 @@ claude
 - 非 Claude pro 用戶計費方法：[Claude Console](https://console.anthropic.com/claude_code)
 
 ## 3. 部署
-
-### 前情提要
-
-這邊省去通用性高、無特殊亮點的三個步驟，詳細操作推薦閱讀：
-1. 下載 node.js
-	- [在 Windows 上安裝 Node.js](https://learn.microsoft.com/zh-tw/windows/dev-environment/javascript/nodejs-on-windows)
-	- [How To Install Node.js on Mac / MacOS (2025)](https://www.youtube.com/watch?v=0LWJ3gmScUY)
-2. 下載 Astro Nano
-3. 下載 Git 並上傳 GitHub
-	- 也可以直接用 GitHub Desktop
-
-
-**注意**：
-1. 一與二順序不可調換
-2. 上面步驟歡迎複製貼上去問 AI，相信它能夠給你更詳盡的回答
-
-$\;$
 
 ### 方法一：Vercel
 
