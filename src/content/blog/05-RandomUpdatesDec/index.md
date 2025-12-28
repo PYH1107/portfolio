@@ -72,7 +72,8 @@ Document Understanding 是 UiPath 中的一個 AI 功能，專門用於處理非
 
 $\;$
 
-本文撰於西元二零二五年十二月二十九日，中和家中。
+本文撰於西元二零二五年十二月二十九日凌晨，中和家中。
+---
 
 [^1]: [AI Center](https://docs.uipath.com/ai-center/automation-cloud/latest/user-guide/march-2025)
 [^2]: [Introducing: Bring Your Own Model to UiPath](https://www.uipath.com/blog/product-and-updates/introducing-bring-your-own-model-to-uipath)
