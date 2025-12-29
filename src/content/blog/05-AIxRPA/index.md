@@ -62,7 +62,7 @@ Document Understanding 是 UiPath 中的一個 AI 功能，專門用於處理非
 
 ### AI 中的自動化
 
-如果說自動化工具正積極地引入 AI，那 AI 同時也正如火如荼地將自己落地於自動化中。不管是直接操控終端機 (Claude Desktop)，或者試著讓 AI 「閱讀」螢幕畫面 (Chat GPT)，十月上旬的時候， Google 甚至推出 Opal，用節點串將工作流串起，並將其稱之為 "no-code AI mini-app builder" [^3]
+如果說自動化工具正積極地引入 AI，那 AI 同時也正如火如荼地將自己落地於自動化中。不管是直接操控終端機 (Claude Desktop)，或者試著讓 AI 「閱讀」螢幕畫面 (Chat GPT)，十月上旬的時候， Google 甚至推出 Opal，用節點串將工作流串起，並將其稱之為 "no-code AI mini-app builder" [^3]。
 
 （宏觀）技術要落地，須得使其踏入人們的生活（將其作用於微觀），「自動化」在如此目標底下成為一個顯學。這樣一來，似乎誕生一種的新的說法，說「解放雙手」才是科學應用的真正目標，AI 不過是時下最熱門的載體？
 
@@ -80,10 +80,10 @@ Document Understanding 是 UiPath 中的一個 AI 功能，專門用於處理非
 
 $\;$
 
+本文撰於西元二零二五年十二月二十九日凌晨，中和家中。
 
 
 ---
-本文撰於西元二零二五年十二月二十九日凌晨，中和家中。
 
 [^1]: [AI Center](https://docs.uipath.com/ai-center/automation-cloud/latest/user-guide/march-2025)
 [^2]: [Introducing: Bring Your Own Model to UiPath](https://www.uipath.com/blog/product-and-updates/introducing-bring-your-own-model-to-uipath)
