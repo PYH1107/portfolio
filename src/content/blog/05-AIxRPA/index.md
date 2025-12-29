@@ -14,9 +14,10 @@ tags: ["言語習作","AI"]
 
 ## 近況更新
 
+<br>
 <center>在提起「AI 工具」一詞的時候你會想到什麼？</center>
 
-$\;$
+</br>
 
 九月份我開始了人生中第二份實習。新公司主張「AI x 自動化」，是一間有些許年份但正在經歷轉型新創。組織腳步雖快，但不會給實習生太多壓力。團隊很小，女生居多，彼此緊密又充滿歡笑與關懷。入職後一切都順利不過，恰巧公司正在擴編，我甚至向上一份實習的同事推薦了我們的公司，問他要不要一起玩。若有任何人問起，我幾乎找不到能夠指摘的缺點，唯有一件事情我心裡遲遲過意不去——「到底什麼是 AI，什麼是自動化？」
 
@@ -42,12 +43,12 @@ Document Understanding 是 UiPath 中的一個 AI 功能，專門用於處理非
 [How to implement UiPath® Context Grounding, by James Jacob • November 8, 2024](https://www.uipath.com/community-blog/tutorials/how-to-implement-uipath-context-grounding)
 
 
-因其「處理非結構化文件」的使用情境，DU 大量使用了 UiPath Trust Layer，而 Trust Layer 中囊括了許多時下最熱門的技術。再加上 LLM Gateway——UiPath 對於 AI 架構的設計實在太讓森感到驚奇。
+因其「處理非結構化文件」的使用情境，DU 大量使用了 UiPath Trust Layer，而 Trust Layer 中囊括了許多時下最熱門的技術。再加上 LLM Gateway——UiPath 對於 AI 架構的設計實在太讓人感到驚奇。
 
 若是在 2025 年 10 月翻看 UiPath AI Center 的官方教學（這部教學影片在寫文的當下被標記為 not available ），不難發現其多專注於敘述如何在 UiPath 的伺服器或者本地端部署模型。具體比如 UiPath 過去提供多種 Out-of-the-Box ML Packages（開箱即用的 ML 套件）且鼓勵用戶 BYOM (Bring Your Own Model)，將本地壓縮檔上傳至 AI Cetner 進行訓練。然而事實是，今年三月，官方正在大量移除過去所提供的 ML Packages，且開始與許多雲端平台（如 AWS、Azure、GCP）合作，使「雲端託管」與「開放整合」的概念更上一層樓。[^1]
 
 > This feature allows customers to integrate any model hosted as a service on Microsoft Azure, AWS, GCP, or provider like Fireworks AI into the UiPath AI Trust Layer seamlessly. [^2]
-n 
+
 總結而言，UiPath——一個 RPA 軟體——進行了三大改動：
 1. 革新面：引入 AI（包含判別式與生成式）
 2. 數據面：從自主託管模型（本地/AI Center）轉向雲端平台整合（Azure/AWS/GCP）」
@@ -71,7 +72,7 @@ n
 「這算是『工具』嗎？還是像 ChatGPT 那樣『開箱即用』才叫工具？」<br>
 「可是 n8n 可以連資料庫又可以串 ai model 的 api key 耶⋯⋯，它這樣是『AI 工具嗎？」
 
-種種問題最終又歸結到一個題：「什麼是 『AI』，什麼是『工具』？」
+種種問題最終又歸結到一個問題：「什麼是 『AI』，什麼是『工具』？」
 
 實習期滿四個月的今天，我想這個問題在 AI 的泡沫消融、市場誕生像是 hyperautomation 或 IPA 那樣嶄新的詮釋之前可能都不會有答案。即使使用者總是不曾在乎名詞和動詞到底有沒有對稱，只會看效益和成果，我依然認為結構與定義是重要的。然而，怎麼端詳產品往往因為使用者的角度不同而不同。大象那麼大，即使不是盲人，一定有人宣稱大象是扇子，有人說大象是水管，在這樣的語境下，「倒果為因」未必是一件壞事，也許我們應該先看「它可以帶來什麼」，再去定義「它是什麼」。
 
@@ -79,9 +80,10 @@ n
 
 $\;$
 
-本文撰於西元二零二五年十二月二十九日凌晨，中和家中。
+
 
 ---
+本文撰於西元二零二五年十二月二十九日凌晨，中和家中。
 
 [^1]: [AI Center](https://docs.uipath.com/ai-center/automation-cloud/latest/user-guide/march-2025)
 [^2]: [Introducing: Bring Your Own Model to UiPath](https://www.uipath.com/blog/product-and-updates/introducing-bring-your-own-model-to-uipath)
