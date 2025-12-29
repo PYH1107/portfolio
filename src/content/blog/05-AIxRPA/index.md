@@ -29,8 +29,9 @@ $\;$
 
 <a title="The Original Benny C, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:AI_relation_to_Generative_Models_subset,_venn_diagram.png"><img width="512" alt="Artificial Intelligence relation to Generative Models subset, Venn diagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/AI_relation_to_Generative_Models_subset%2C_venn_diagram.png/512px-AI_relation_to_Generative_Models_subset%2C_venn_diagram.png?20230402082917"></a>
 
+## AI x 自動化
 
-## 自動化中的 AI(UiPath)
+### 自動化中的 AI(UiPath)
 九月報到一始，正職為我安排了一份內部的學習計劃，希望我能夠學會使用 UiPath 並了解何謂 RPA。這是我第一次接觸機器人流程自動化，深深覺得這種東西實在太酷了。RPA (Robotic Process Automation) 是一種軟體技術，能夠模擬人類在電腦上的操作行為，自動執行重複性、規則明確的任務，UiPath 與 Power Automate 即是目前市佔率最高的兩個 RPA 工具。
 
 期間和同事開過幾次 UiPath 的讀書會，發現關於模型與資料集的內容因頻繁更新而往往難尋，連官方教學都不是最新版本。這不免叫人苦惱，一邊叨念官方怎麼可以如此懈怠未能及時更新，一邊又驚嘆於其產品之迭代與進步。往返之間，說起 UiPath，我對正職提起，似乎是對 DU(Document Understanding) 最感興趣。
@@ -56,13 +57,13 @@ n
 
 即使這完全是可預知的未來，但在既有且市佔率高的 RPA 工具中看到一份似乎尚不穩定的、關於 AI 的產品路線圖，好像自己窺見了困境與痛點，並且商機與新時代往往隱於困境與痛點之中。朋友的前東家是專門做類似業務的，但是放在 UiPath（既有的 RPA 產品）又覺得更酷了，好像證實「AI」和「自動化」是有憑有據地被如此綁定，組合而成的字詞自己構成了一種想像。
 
-這樣的改動也間接回扣了我最初的疑惑：「什麼樣才算是『做 AI』？」如果依照這樣的改動，我是不是能推測資料與模型——自動化與 AI 的重要分野之一——放在哪裡好像是困擾著 UiPath 的問題。可是這個問題考量的變因太多， infrastructure、成本、人力⋯⋯，那是不是我持續糾結不為太明智的一件事情？
+這樣的改動也間接回扣了我最初的疑惑：「什麼樣才算是『做 AI』？」如果依照這樣的改動，我是不是能推測「把資料與模型（自動化與 AI 的重要分野之一）放在哪裡」是困擾著 UiPath 的問題？可是這個問題考量的變因太多， infrastructure、成本、人力⋯⋯，那是不是我持續糾結不為太明智的一件事情？
 
-## AI 中的自動化
+### AI 中的自動化
 
-如果說自動化工具正積極地引入 AI ，那 AI 同時也正如火如帝將自己落地於自動化中。不管是直接操控終端機 (Claude Desktop)，或者試著讓 AI 「閱讀」螢幕畫面 (Chat GPT)，十月上旬的時候， Google 甚至推出 Opal，用節點串將工作流串起，並將其稱之為 "no-code AI mini-app builder" [^3]
+如果說自動化工具正積極地引入 AI，那 AI 同時也正如火如帝將自己落地於自動化中。不管是直接操控終端機 (Claude Desktop)，或者試著讓 AI 「閱讀」螢幕畫面 (Chat GPT)，十月上旬的時候， Google 甚至推出 Opal，用節點串將工作流串起，並將其稱之為 "no-code AI mini-app builder" [^3]
 
-（宏觀）技術要落地，須得使其踏入人們的生活（將其作用於微觀），「自動化」在如此哺腰底下成為一個顯學，以「解放雙手」為口號，是科學應用長久以來的直覺。
+（宏觀）技術要落地，須得使其踏入人們的生活（將其作用於微觀），「自動化」在如此目標底下成為一個顯學。這樣一來，似乎誕生一種的新的說法，說「解放雙手」才是科學應用的真正目標，AI 不過是時下最熱門的載體？
 
 ## 寫在最後
 
