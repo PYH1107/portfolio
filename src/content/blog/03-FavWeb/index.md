@@ -26,7 +26,7 @@ tags: ["website", "recommedations"]
 # 資訊來源
 1. [Hacker News](https://news.ycombinator.com/newest)
 2. [Buzzing](https://www.buzzing.cc/)
+3. [Cofolios](https://www.cofolios.com/)
 
-
-- 我喜歡三不五時翻一翻 WebRing，總是能有些新奇的發現。
+- 隨意跟著 webring 跳轉網站真的是一件很有趣的事情！常常有很多意想不到的發現～推薦所有人都去試試！
 
