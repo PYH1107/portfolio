@@ -37,7 +37,7 @@ tags: ["言語習作","AI"]
 
 期間和同事開過幾次 UiPath 的讀書會，發現關於模型與資料集的內容因頻繁更新而往往難尋，連官方教學都不是最新版本。這不免叫人苦惱，一邊叨念官方怎麼可以如此懈怠未能及時更新，一邊又驚嘆於其產品之迭代與進步。往返之間，說起 UiPath，我對正職提起，似乎是對 DU(Document Understanding) 最感興趣。
 
-Document Understanding 是 UiPath 中的一個 AI 功能，專門用於處理非結構化文件。文件處理方法多元，包含但不限於 OCR、機器學系、GenAI⋯⋯，其中還有 AI Center，支援自訓練模型的部署和管理，供使用者自行訓練、調整模型。 DU 同時也強調 Human-in-the-Loop（人機協作），使用戶夠進行人工驗證，並自驗證資料中持續改進模型。
+Document Understanding 是 UiPath 中的一個 AI 功能，專門用於處理非結構化文件。文件處理方法多元，包含但不限於 OCR、機器學習、GenAI⋯⋯，其中還有 AI Center，支援自訓練模型的部署和管理，供使用者自行訓練、調整模型。 DU 同時也強調 Human-in-the-Loop（人機協作），使用戶夠進行人工驗證，並自驗證資料中持續改進模型。
 
 ![alt text](image.png)
 [How to implement UiPath® Context Grounding, by James Jacob • November 8, 2024](https://www.uipath.com/community-blog/tutorials/how-to-implement-uipath-context-grounding)
