@@ -37,7 +37,7 @@ tags: ["言語習作","AI"]
 
 期間和同事開過幾次 UiPath 的讀書會，發現關於模型與資料集的內容因頻繁更新而往往難尋，連官方教學都不是最新版本。這不免叫人苦惱，一邊叨念官方怎麼可以如此懈怠未能及時更新，一邊又驚嘆於其產品之迭代與進步。往返之間，說起 UiPath，我對正職提起，似乎是對 DU(Document Understanding) 最感興趣。
 
-Document Understanding 是 UiPath 中的一個 AI 功能，專門用於處理非結構化文件。文件處理方法多元，包含但不限於 OCR、機器學習、GenAI⋯⋯，其中還有 AI Center，支援自訓練模型的部署和管理，供使用者自行訓練、調整模型。 DU 同時也強調 Human-in-the-Loop（人機協作），使用戶夠進行人工驗證，並自驗證資料中持續改進模型。
+Document Understanding 是 UiPath 中的一個 AI 功能，專門用於處理非結構化文件。文件處理方法多元，包含但不限於 OCR、機器學習、GenAI⋯⋯，其中還有 AI Center，支援自訓練模型的部署和管理，供使用者自行訓練、調整模型。 DU 同時也支援 Human-in-the-Loop（人機協作），使用戶夠進行人工驗證，並從驗證資料中持續改進模型。
 
 ![alt text](image.png)
 [How to implement UiPath® Context Grounding, by James Jacob • November 8, 2024](https://www.uipath.com/community-blog/tutorials/how-to-implement-uipath-context-grounding)
@@ -45,7 +45,7 @@ Document Understanding 是 UiPath 中的一個 AI 功能，專門用於處理非
 
 因其「處理非結構化文件」的使用情境，DU 大量使用了 UiPath Trust Layer，而 Trust Layer 中囊括了許多時下最熱門的技術。再加上 LLM Gateway——UiPath 對於 AI 架構的設計實在太讓人感到驚奇。
 
-若是在 2025 年 10 月翻看 UiPath AI Center 的官方教學（這部教學影片在寫文的當下被標記為 not available ），不難發現其多專注於敘述如何在 UiPath 的伺服器或者本地端部署模型。具體比如 UiPath 過去提供多種 Out-of-the-Box ML Packages（開箱即用的 ML 套件）且鼓勵用戶 BYOM (Bring Your Own Model)，將本地壓縮檔上傳至 AI Cetner 進行訓練。然而事實是，今年三月，官方正在大量移除過去所提供的 ML Packages，且開始與許多雲端平台（如 AWS、Azure、GCP）合作，使「雲端託管」與「開放整合」的概念更上一層樓。[^1]
+若是在 2025 年 10 月翻看 UiPath AI Center 的官方教學（這部教學影片在寫文的當下被標記為 not available ），不難發現其多專注於敘述如何在 UiPath 的伺服器或者本地端部署模型。具體比如 UiPath 過去提供多種 Out-of-the-Box ML Packages（開箱即用的 ML 套件）且鼓勵用戶 BYOM (Bring Your Own Model)，將本地壓縮檔上傳至 AI Cetner 進行訓練。然而事實是，今年三月，官方開始大量移除過去所提供的 ML Packages，且開始與許多雲端平台（如 AWS、Azure、GCP）合作，使「雲端託管」與「開放整合」的概念更上一層樓。[^1]
 
 > This feature allows customers to integrate any model hosted as a service on Microsoft Azure, AWS, GCP, or provider like Fireworks AI into the UiPath AI Trust Layer seamlessly. [^2]
 
@@ -62,7 +62,7 @@ Document Understanding 是 UiPath 中的一個 AI 功能，專門用於處理非
 
 ### AI 中的自動化
 
-如果說自動化工具正積極地引入 AI，那 AI 同時也正如火如荼地將自己落地於自動化中。不管是直接操控終端機 (Claude Desktop)，或者試著讓 AI 「閱讀」螢幕畫面 (Chat GPT)，十月上旬的時候， Google 甚至推出 Opal，用節點串將工作流串起，並將其稱之為 "no-code AI mini-app builder" [^3]。
+如果說自動化工具正積極地引入 AI，那 AI 同時也正如火如荼地將自己落地於自動化中。不管是直接操控終端機 (Claude Desktop)，或者試著讓 AI 「閱讀」螢幕畫面 (ChatGPT)，十月上旬的時候， Google 甚至推出 Opal，用節點串將工作流串起，並將其稱之為 "no-code AI mini-app builder" [^3]。
 
 （宏觀）技術要落地，須得使其踏入人們的生活（將其作用於微觀），「自動化」在如此目標底下成為一個顯學。這樣一來，似乎誕生一種的新的說法，說「解放雙手」才是科學應用的真正目標，AI 不過是時下最熱門的載體？
 
