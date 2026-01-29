@@ -1,6 +1,6 @@
 ---
 title: "《東京教父》：杜鵑休向耳邊啼"
-description: "內含個人解讀與大量劇透"
+description: "內含大量個人解讀與意識流劇透"
 date: "Jan 24 2026"
 tags: ["言語習作"]
 
