@@ -32,7 +32,7 @@ AI 時代，「有」已經不再稀奇，在「有」之上的是「合適的�
 
 ## Step 2. 我想要什麼
 
-我想像中的個人網站分成兩種：一種是典型的 portfolio，可以參考 [Cofolios](https://www.cofolios.com/)，另一種則是 digitabl garden。
+我想像中的個人網站分成兩種：一種是典型的 portfolio，可以參考 [Cofolios](https://www.cofolios.com/)，另一種則是 digital garden。
 
 該怎麼構想個人網站，往往關乎於契機。說來有些慚愧，起心動念想寫個人部落格不過三個理由：
 1. 求職的時候，「個人作品」、「個人網站」的欄位總是空白，稍顯尷尬
