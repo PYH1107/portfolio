@@ -11,44 +11,40 @@
   <div class="gradient-blob blob-3"></div>
 </div>
 
-<script is:inline>
-  (function() {
-    const blobs = document.querySelectorAll('.gradient-blob');
-    if (!blobs.length) return;
+<script>
+  const blobs = document.querySelectorAll('.gradient-blob') as NodeListOf<HTMLElement>;
 
+  if (blobs.length) {
     let mouseX = 0;
     let mouseY = 0;
     const currentX = [0, 0, 0];
     const currentY = [0, 0, 0];
 
-    // Different multipliers for parallax depth effect
-    const multipliers = [40, 60, 80];
-    const smoothing = 0.08;
+    // Larger multipliers for more visible effect
+    const multipliers = [80, 120, 160];
+    const smoothing = 0.05;
 
-    document.addEventListener('mousemove', function(e) {
-      // Normalize to -1 to 1 range, centered
+    document.addEventListener('mousemove', (e) => {
       mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
       mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
     });
 
     function animate() {
-      blobs.forEach(function(blob, i) {
-        // Target position based on mouse
+      blobs.forEach((blob, i) => {
         const targetX = mouseX * multipliers[i];
         const targetY = mouseY * multipliers[i];
 
-        // Smooth lerp
         currentX[i] += (targetX - currentX[i]) * smoothing;
         currentY[i] += (targetY - currentY[i]) * smoothing;
 
-        blob.style.transform = 'translate(' + currentX[i] + 'px, ' + currentY[i] + 'px)';
+        blob.style.transform = `translate(${currentX[i]}px, ${currentY[i]}px)`;
       });
 
       requestAnimationFrame(animate);
     }
 
     animate();
-  })();
+  }
 </script>
 
 <style is:global>
