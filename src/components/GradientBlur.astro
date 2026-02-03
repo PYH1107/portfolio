@@ -1,0 +1,119 @@
+---
+/**
+ * Animated gradient blur background
+ * Soft, subtle blobs that float and respond to mouse movement
+ */
+---
+
+<div class="gradient-blur-container" aria-hidden="true">
+  <div class="gradient-blob blob-1"></div>
+  <div class="gradient-blob blob-2"></div>
+  <div class="gradient-blob blob-3"></div>
+</div>
+
+<script is:inline>
+  (function() {
+    const blobs = document.querySelectorAll('.gradient-blob');
+    if (!blobs.length) return;
+
+    let mouseX = 0;
+    let mouseY = 0;
+    const currentX = [0, 0, 0];
+    const currentY = [0, 0, 0];
+
+    // Different multipliers for parallax depth effect
+    const multipliers = [40, 60, 80];
+    const smoothing = 0.08;
+
+    document.addEventListener('mousemove', function(e) {
+      // Normalize to -1 to 1 range, centered
+      mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+      mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+    });
+
+    function animate() {
+      blobs.forEach(function(blob, i) {
+        // Target position based on mouse
+        const targetX = mouseX * multipliers[i];
+        const targetY = mouseY * multipliers[i];
+
+        // Smooth lerp
+        currentX[i] += (targetX - currentX[i]) * smoothing;
+        currentY[i] += (targetY - currentY[i]) * smoothing;
+
+        blob.style.transform = 'translate(' + currentX[i] + 'px, ' + currentY[i] + 'px)';
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  })();
+</script>
+
+<style is:global>
+  .gradient-blur-container {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .gradient-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    will-change: transform;
+  }
+
+  /* Light mode - cool tones */
+  .blob-1 {
+    width: 280px;
+    height: 280px;
+    top: 0;
+    left: -80px;
+    background: linear-gradient(135deg, #fecaca 0%, #991b1b 100%);
+  }
+
+  .blob-2 {
+    width: 240px;
+    height: 240px;
+    bottom: -60px;
+    right: -60px;
+    background: linear-gradient(135deg, #c7d2fe 0%, #6366f1 100%);
+  }
+
+  .blob-3 {
+    width: 200px;
+    height: 200px;
+    top: 40%;
+    right: 5%;
+    background: linear-gradient(135deg, #a5f3fc 0%, #0891b2 100%);
+    opacity: 0.35;
+  }
+
+  /* Dark mode - muted cool tones */
+  html.dark .blob-1 {
+    background: linear-gradient(135deg, #7f1d1d 0%, #450a0a 100%);
+    opacity: 0.35;
+  }
+
+  html.dark .blob-2 {
+    background: linear-gradient(135deg, #312e81 0%, #4c1d95 100%);
+    opacity: 0.3;
+  }
+
+  html.dark .blob-3 {
+    background: linear-gradient(135deg, #164e63 0%, #0e7490 100%);
+    opacity: 0.25;
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .gradient-blob {
+      transition: none;
+    }
+  }
+</style>
