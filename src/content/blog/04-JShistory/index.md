@@ -2,7 +2,7 @@
 title: "JavaScript 的歷史包袱：誰是罪魁禍首？"
 description: "我第一次碰 JS 的時候研究套件比研究語法還痛苦"
 date: "Aug 21 2025"
-tags: ["research","自學筆記"]
+tags: ["自學筆記"]
 ---
 
 本文由 Claude Sonnet 4 進行大範圍的資料查找與初步答疑，並由人工進行詮釋、加註、查證與撰寫。
