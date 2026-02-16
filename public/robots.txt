@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow specific blog posts
+
+
+# Sitemap
+Sitemap: https://yhpan.me/sitemap-index.xml

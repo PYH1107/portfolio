@@ -9,7 +9,7 @@ import remarkNumberedFootnoteLabels from 'remark-numbered-footnote-labels';
 
 export default defineConfig({
   site: "https://yhpan.me",
-  
+
   integrations: [
     mdx({
       remarkPlugins: [remarkMath, remarkGfm],
@@ -25,21 +25,23 @@ export default defineConfig({
           trust: true,           // 信任輸入
           // 支援所有數學環境
           delimiters: [
-            {left: '$$', right: '$$', display: true},
-            {left: '$', right: '$', display: false},
-            {left: '\\(', right: '\\)', display: false},
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false },
+            { left: '\\(', right: '\\)', display: false },
             //{left: '\\[', right: '\\]', display: true}
           ]
         }]
       ],
     }),
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.includes('05-aixrpa') && !page.includes('09-LaTex-try')
+    }),
     tailwind()
   ],
-  
+
   // 全域 Markdown 配置
   markdown: {
-    extendDefaultPlugins: true, 
+    extendDefaultPlugins: true,
     remarkPlugins: [remarkMath, remarkGfm, remarkNumberedFootnoteLabels],
     rehypePlugins: [
       [rehypeKatex, {

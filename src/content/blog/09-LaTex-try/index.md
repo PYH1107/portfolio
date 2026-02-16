@@ -3,6 +3,7 @@ title: "Latex TRY"
 description: "This is from HTML HW3"
 date: "Mar 22 1980"
 tags: ["Machine Learning", "LaTeX"]
+draft: true
 ---
 
 # 1ddddd

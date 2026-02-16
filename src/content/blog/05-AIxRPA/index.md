@@ -3,7 +3,7 @@ title: "實習劄記 (1)"
 description: "近期對於 AI 和自動化的一些反思，因為太長所以沒有放在 jottings"
 date: "Dec 29 2025"
 tags: ["言語習作","AI"]
-
+noindex: true
 ---
 
 一眨眼就快要斷更四個月了，也是又一個季節終了。
