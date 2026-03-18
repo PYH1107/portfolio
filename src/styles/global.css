@@ -46,9 +46,9 @@ article {
   @apply prose-headings:text-black prose-headings:dark:text-white;
   @apply prose-h1:text-[1.675rem] prose-h2:text-[1.6rem];
   /* Chinese punctuation rules */
-  text-wrap: pretty;
+  /* text-wrap: pretty; */ /* 暫時註釋掉測試 */
   hanging-punctuation: first last;
-  line-break: strict;
+  /* line-break: strict; */ /* 暫時註釋掉測試 */
 }
 
 /* Better font stack for serif text including Chinese */
