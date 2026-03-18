@@ -76,15 +76,22 @@ article h4, article h5, article h6 {
 }
 
 @layer utilities {
-  /* Ensure images display properly on mobile */
+  /* Force image visibility and responsiveness */
   article img {
-    @apply max-w-full h-auto;
-    width: auto !important;
+    @apply max-w-full h-auto block;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
   }
   
   /* Image wrapper for links */
-  article a > img {
-    @apply block mx-auto;
+  article a > img,
+  article a[href*="commons.wikimedia.org"] img {
+    @apply block mx-auto my-4;
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
   }
   
   article a {
