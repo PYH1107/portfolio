@@ -28,7 +28,7 @@ noindex: true
 
 **如果用更準確、宏觀的角度來說，我們最終應是透過這些技術（演算法），達到「自動化」效果。**
 
-<a title="The Original Benny C, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:AI_relation_to_Generative_Models_subset,_venn_diagram.png"><img width="500" alt="Artificial Intelligence relation to Generative Models subset, Venn diagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/AI_relation_to_Generative_Models_subset%2C_venn_diagram.png/500px-AI_relation_to_Generative_Models_subset%2C_venn_diagram.png"></a>
+<a title="The Original Benny C, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:AI_relation_to_Generative_Models_subset,_venn_diagram.png"><img style="max-width: 100%; height: auto;" alt="Artificial Intelligence relation to Generative Models subset, Venn diagram" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/AI_relation_to_Generative_Models_subset%2C_venn_diagram.png/500px-AI_relation_to_Generative_Models_subset%2C_venn_diagram.png"></a>
 
 ## AI x 自動化
 

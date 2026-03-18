@@ -76,6 +76,17 @@ article h4, article h5, article h6 {
 }
 
 @layer utilities {
+  /* Ensure images display properly on mobile */
+  article img {
+    @apply max-w-full h-auto;
+    width: auto !important;
+  }
+  
+  /* Image wrapper for links */
+  article a > img {
+    @apply block mx-auto;
+  }
+  
   article a {
     @apply font-sans text-current underline underline-offset-2;
     @apply decoration-black/15 dark:decoration-white/30;
