@@ -21,4 +21,5 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-src/content/blog/07-etherfi/
+src/content/blog/etherfi/
+src/content/blog/09-LaTex-try/ 
