@@ -15,8 +15,11 @@ export function formatDate(date: Date) {
 
 export function readingTime(html: string) {
   const textOnly = html.replace(/<[^>]+>/g, "");
-  const wordCount = textOnly.split(/\s+/).length;
-  const readingTimeMinutes = ((wordCount / 200) + 1).toFixed();
+  // Count CJK characters and words for mixed content
+  const cjkChars = (textOnly.match(/[\u4e00-\u9fff]/g) || []).length;
+  const nonCjkWords = textOnly.replace(/[\u4e00-\u9fff]/g, "").split(/\s+/).filter(Boolean).length;
+  // CJK: ~400 chars/min, English: ~200 words/min
+  const readingTimeMinutes = Math.ceil((cjkChars / 400) + (nonCjkWords / 200) + 1);
   return `${readingTimeMinutes} min read`;
 }
 
