@@ -7,7 +7,6 @@ tags: ["recommedations"]
 
 # 個人網站
 
-
 1. [Steph Ango](https://stephango.com/)
 2. [OwenYoung](https://www.owenyoung.com/)
 3. [Sheracaolity](https://sheracaolity.ghost.io/)
@@ -18,7 +17,6 @@ tags: ["recommedations"]
 8. [TINIBLOG](https://blog.tinikov.com/)
 9. [The Wine Guy](https://blog.jameshsu.csie.org/)
 10. [Maggie Appleton](https://maggieappleton.com/)
-11. [Brian Lovin](https://brianlovin.com/)
 12. 
 
 
