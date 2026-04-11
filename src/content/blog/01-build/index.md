@@ -134,7 +134,7 @@ claude
 
 ## 3. 部署
 
-### 方法一：Vercel
+### 方法一：直接套用 Vercel 網域
 
 [Astro Nano 官方](https://github.com/markhorn-dev/astro-nano)推薦的部署方式有二：Vercel 和 Netlfiy。
 由於我不需要複雜的後端功能，所以 Vercel 在「一鍵部署」和「每月 100GB 的免費流量」完美勝出。加上 Astro Nano 的[ Live Demo](https://astro-nano-demo.vercel.app/) 也是使用 Vercel，所以我在這點上面也沒有多做猶豫。
