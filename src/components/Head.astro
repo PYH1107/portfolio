@@ -58,6 +58,23 @@ const { title, description, image = "/nano.png", noindex = false } = Astro.props
 <meta name="description" content={description} />
 <meta name="keywords" content="Yun-Huei Pan, 潘允蕙, 個人網站, blog, 技術分享, programming" />
 
+<!-- Structured Data for Person -->
+<script type="application/ld+json" is:inline>
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "潘允蕙",
+  "alternateName": "Yun-Huei Pan",
+  "url": "https://yhpan.me",
+  "sameAs": [
+    "https://github.com/PYH1107",
+    "https://www.linkedin.com/in/yun-huei-pan/",
+    "https://x.com/maypan1107"
+  ],
+  "description": "潘允蕙的個人網站與數位花園"
+})}
+</script>
+
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />

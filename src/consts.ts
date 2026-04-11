@@ -8,8 +8,8 @@ export const SITE: Site = {
 };
 
 export const HOME: Metadata = {
-  TITLE: "Home",
-  DESCRIPTION: "Yun-Huei Pan's personal website.",
+  TITLE: "潘允蕙",
+  DESCRIPTION: "潘允蕙的個人網站與數位花園。Yun-Huei Pan's personal website and digital garden.",
 };
 
 export const BLOG: Metadata = {
