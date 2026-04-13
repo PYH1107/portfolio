@@ -17,7 +17,6 @@ tags: ["recommedations"]
 8. [TINIBLOG](https://blog.tinikov.com/)
 9. [The Wine Guy](https://blog.jameshsu.csie.org/)
 10. [Maggie Appleton](https://maggieappleton.com/)
-12. 
 
 
 我盡力不提及這些人的背景，因為我希望看到這邊的人是因為內容將他們的網站加入書籤，而非因其身上的頭銜（不過誰知道呢？他們說不定樂於如此，這也許只是我的一廂情願罷了）。
@@ -26,8 +25,12 @@ tags: ["recommedations"]
 
 # 資訊來源
 1. [Hacker News](https://news.ycombinator.com/newest)
-2. [Buzzing](https://www.buzzing.cc/)
-3. [Cofolios](https://www.cofolios.com/)
+    - 我還是很愛 HN，但我最近訂閱了一個[繁體中文的 HN tg bot](https://t.me/HackerNews100zhTW)，所以就比較少上這個網站了。
+2. [Cofolios](https://www.cofolios.com/)
+3. X(Twitter)
+    - 這個好像沒啥好說的，很亂資訊又迭代快速的地方
 
+
+## `/btw`
 - 隨意跟著 webring 跳轉網站真的是一件很有趣的事情！常常有很多意想不到的發現～推薦所有人都去試試！
 
