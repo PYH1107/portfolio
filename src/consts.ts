@@ -22,6 +22,11 @@ export const JOTTINGS = {
   DESCRIPTION: "My thoughts and insights."
 }
 
+export const NOW = {
+  TITLE: "Now",
+  DESCRIPTION: "What I'm doing right now."
+}
+
 
 export const SOCIALS: Socials = [
   { 

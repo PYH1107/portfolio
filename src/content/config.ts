@@ -31,4 +31,11 @@ const projects = defineCollection({
   }),
 });
 
-export const collections = { blog, jottings, projects };
+const now = defineCollection({
+  type: "content",
+  schema: z.object({
+    date: z.coerce.date(),
+  }),
+});
+
+export const collections = { blog, jottings, projects, now };

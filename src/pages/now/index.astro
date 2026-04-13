@@ -1,0 +1,79 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import { NOW } from "@consts";
+
+const collection = (await getCollection("now"))
+  .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
+
+const nows = await Promise.all(
+  collection.map(async (item) => {
+    const { Content } = await item.render();
+    return { ...item, Content };
+  })
+);
+---
+
+<PageLayout title={NOW.TITLE} description={NOW.DESCRIPTION}>
+  <Container>
+    <div class="max-w-2xl mx-auto space-y-8">
+      <!-- Header -->
+      <div class="animate space-y-2">
+        <h1 class="font-bold text-2xl text-black dark:text-white">
+          Now
+        </h1>
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          我現在在做什麼。最後更新：{nows[0]?.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+        </p>
+      </div>
+      
+      <!-- Now Feed -->
+      <div class="space-y-0">
+        {nows.map((entry) => (
+          <article class="animate py-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+            <!-- Date -->
+            <div class="flex items-start justify-between mb-3">
+              <time class="text-sm text-gray-500 dark:text-gray-400 font-medium">
+                {entry.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+              </time>
+            </div>
+            
+            <!-- Content -->
+            <div class="prose prose-sm dark:prose-invert max-w-none text-gray-900 dark:text-gray-100">
+              <entry.Content />
+            </div>
+          </article>
+        ))}
+      </div>
+      
+      <!-- Footer note -->
+      <div class="animate pt-4 text-xs text-gray-400 dark:text-gray-500 italic">
+        這是一個 <a href="https://nownownow.com/about" target="_blank" class="underline hover:text-gray-600 dark:hover:text-gray-300">/now page</a>，記錄我當下的狀態。
+      </div>
+    </div>
+  </Container>
+</PageLayout>
+
+<style is:global>
+  .prose {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+  
+  .prose p {
+    margin: 0.75rem 0;
+  }
+  
+  .prose p:first-child {
+    margin-top: 0;
+  }
+  
+  .prose p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .prose strong {
+    color: inherit;
+  }
+</style>
