@@ -2,7 +2,7 @@
 title: "我不定期翻閱的網站們"
 description: "也算是我自己的書籤"
 date: "Aug 19 2025"
-tags: ["recommedations"]
+tags: ["recommendations"]
 ---
 
 # 個人網站

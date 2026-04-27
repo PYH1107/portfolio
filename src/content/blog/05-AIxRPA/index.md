@@ -2,7 +2,7 @@
 title: "實習劄記 (1)"
 description: "近期對於 AI 和自動化的一些反思，因為太長所以沒有放在 jottings"
 date: "Dec 29 2025"
-tags: ["言語習作","AI"]
+tags: ["AI", "notes"]
 noindex: true
 ---
 
