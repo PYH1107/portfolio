@@ -78,4 +78,4 @@ tags: ["言語習作", "notes"]
 
 [^7]: 《英王欽定本》(KJV) 原文。**Exodus 23:9**: *"Also thou shalt not oppress a stranger: for ye know the heart of a stranger, seeing ye were strangers in the land of Egypt."*
 
-[^8]: 原文：*"Then one will also recognize that while one is consciously afraid of not being loved, the real, though usu^ly unconscious fear is that of loving."*
+[^8]: 原文：*"Then one will also recognize that while one is consciously afraid of not being loved, the real, though usually unconscious fear is that of loving."*
