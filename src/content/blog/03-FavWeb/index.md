@@ -17,6 +17,7 @@ tags: ["recommendations"]
 8. [TINIBLOG](https://blog.tinikov.com/)
 9. [The Wine Guy](https://blog.jameshsu.csie.org/)
 10. [Maggie Appleton](https://maggieappleton.com/)
+11. [ICDYCT / 我能, 你也行 / I Can Do, You Can Too](https://zelikk.blogspot.com/)
 
 
 我盡力不提及這些人的背景，因為我希望看到這邊的人是因為內容將他們的網站加入書籤，而非因其身上的頭銜（不過誰知道呢？他們說不定樂於如此，這也許只是我的一廂情願罷了）。
