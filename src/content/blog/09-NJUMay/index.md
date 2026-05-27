@@ -1,6 +1,6 @@
 ---
 title: "在南行喃 (2)"
-description: "這真的是我最後一次說「最後一次」"
+description: "這是我最後一次說「最後一次」"
 date: "May 20 2026"
 tags: ["言語習作"]
 
