@@ -20,6 +20,7 @@ export async function GET(context: Context) {
     title: HOME.TITLE,
     description: HOME.DESCRIPTION,
     site: context.site,
+    customData: `<follow_challenge><feedId>1269056713495805952</feedId><userId>1254529318285869056</userId></follow_challenge>`,
     items: items.map((item) => ({
       title: item.data.title,
       description: item.data.description,
